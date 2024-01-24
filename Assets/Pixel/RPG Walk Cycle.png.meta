@@ -1,0 +1,1328 @@
+fileFormatVersion: 2
+guid: 7ff81029fc0bac44f87d28aa757c80b5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RPG Walk Cycle_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1317
+        width: 166
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cd978a375c96c488067afb4880cdc1
+      internalID: 1573964804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_1
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1317
+        width: 166
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9b1f554fc27464092f836932429378
+      internalID: 1088914283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_2
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1317
+        width: 168
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eebbfd00cae9c64c8bf17e9087415a3
+      internalID: 965719339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_3
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1317
+        width: 169
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a147940ff2d82bf46a29e54264c8967e
+      internalID: -1658979147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_4
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1317
+        width: 148
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b24345b7648ab24aaac4290b1d26716
+      internalID: 1264941055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_5
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1317
+        width: 166
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e569fbb8f91bc24588e84fcbeed6dcc
+      internalID: -658369041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_6
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 1306
+        width: 146
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28df6e71318d3b1489566e9875a6f8ad
+      internalID: -1641538338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_7
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 1317
+        width: 166
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beae6a6acc3c2ca4bbbf13161c348ffc
+      internalID: 364168589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_8
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 1306
+        width: 149
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4938fb77c29c1419b6f67eef21a12f
+      internalID: 775801811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_9
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1317
+        width: 169
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa77b9c67a6e8f45acfcb002d9c436d
+      internalID: -547044166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_10
+      rect:
+        serializedVersion: 2
+        x: 3275
+        y: 1317
+        width: 169
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fec7ab9ead1d34ca5fb504e9bcf3cb
+      internalID: -588800012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_11
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 1317
+        width: 166
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbd32fe41bc26f4c903d98d9f2c9c94
+      internalID: -285056274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_12
+      rect:
+        serializedVersion: 2
+        x: 3928
+        y: 1317
+        width: 146
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a21a5f4a2dd044d9776c4c936ddb4b
+      internalID: -1400552155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_13
+      rect:
+        serializedVersion: 2
+        x: 4226
+        y: 1317
+        width: 168
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985adb30b5851a043aec00cd173361d6
+      internalID: 2128425600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_14
+      rect:
+        serializedVersion: 2
+        x: 4566
+        y: 1306
+        width: 146
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc85552e5ebc56e4cb832225ceb62ec6
+      internalID: 48189958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_15
+      rect:
+        serializedVersion: 2
+        x: 4867
+        y: 1317
+        width: 166
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7836fb6df85c73242814eacfeecb2233
+      internalID: 1913409632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_16
+      rect:
+        serializedVersion: 2
+        x: 5207
+        y: 1306
+        width: 147
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5679ba5aa78999478b6c02ff9814939
+      internalID: -510143835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_17
+      rect:
+        serializedVersion: 2
+        x: 5506
+        y: 1317
+        width: 168
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dc6028f20511e40953b329ffb33b7c
+      internalID: 9180110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_18
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 997
+        width: 158
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab10f89638e95f24383e807c1f46558e
+      internalID: -1484658729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_19
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 997
+        width: 168
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfd27e279bb6774b95a93da03bf1f56
+      internalID: 585245039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_20
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 997
+        width: 157
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef48372bf99179240aab7435feea9f40
+      internalID: -924150226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_21
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 986
+        width: 157
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053ad9246cb5d2c48acb694e1697efb5
+      internalID: 1969688735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_22
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 986
+        width: 158
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a406cfc06c80c468073f068dec60da
+      internalID: -1489593611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_23
+      rect:
+        serializedVersion: 2
+        x: 3286
+        y: 997
+        width: 158
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1b899b3702c66458d789ca34b9d1d3
+      internalID: -954752226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_24
+      rect:
+        serializedVersion: 2
+        x: 3916
+        y: 997
+        width: 158
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a632c97068b1b624bb4ce571ac8d1120
+      internalID: 922337577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_25
+      rect:
+        serializedVersion: 2
+        x: 4558
+        y: 986
+        width: 154
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaa0dd99b55d8e41b78d967a2f1e3d5
+      internalID: 578038185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_26
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 986
+        width: 158
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f2d8c76dcb0224aaae225e56ba7530
+      internalID: -2026407515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_27
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 676
+        width: 127
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce06bc0f5517d7443965ca094a5d0b86
+      internalID: 2062325354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_28
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 676
+        width: 129
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b319fa2cb1587943acb53511b93f86b
+      internalID: 1271472890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_29
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 676
+        width: 126
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbd6a913b0da304db4c4f4bed912a2c
+      internalID: -1922425807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_30
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 676
+        width: 129
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96571449cbe8cc447a5cf0bf1bde327c
+      internalID: -1454171269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_31
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 676
+        width: 127
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52932b46c27d44d49a1187b703edf107
+      internalID: 1220451568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_32
+      rect:
+        serializedVersion: 2
+        x: 3298
+        y: 676
+        width: 126
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd6682109ce51442b42fc8370fb9c30
+      internalID: 2122098149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_33
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 676
+        width: 127
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f7d95ed3499184f811df2d549c2efa
+      internalID: 1720275972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_34
+      rect:
+        serializedVersion: 2
+        x: 4577
+        y: 676
+        width: 127
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d426a56188596c84095f9e4bcc706e82
+      internalID: 2083882261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_35
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 676
+        width: 126
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3346cb49814fdb44694551665199fa97
+      internalID: -694685372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_36
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 356
+        width: 138
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e0ea384437a2e4c87763a066a98c3c
+      internalID: 1989585949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_37
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 356
+        width: 137
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2090ca69e2dc849a09b45ae8f7fa0a
+      internalID: -6306079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_38
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 356
+        width: 129
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3c4326e5edcb845bcab0fa706b1805
+      internalID: 742199315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_39
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 356
+        width: 127
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fa648fe6d3995409cf1b8d03aca423
+      internalID: 418307461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_40
+      rect:
+        serializedVersion: 2
+        x: 2668
+        y: 367
+        width: 126
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93f78ebc7a164b48872fc216034ece5
+      internalID: -1095489019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_41
+      rect:
+        serializedVersion: 2
+        x: 3298
+        y: 356
+        width: 135
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e68caeef68b194e8d65bdd938643a3
+      internalID: 629272308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_42
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 367
+        width: 146
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289df2df99a42404a8235ddfb803f770
+      internalID: 743700290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_43
+      rect:
+        serializedVersion: 2
+        x: 4566
+        y: 347
+        width: 158
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203141f1c63264e4da619148bdc52257
+      internalID: -1566927508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_44
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 356
+        width: 149
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335f5c157c04b72459bd3478bcd5049f
+      internalID: -1270279926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_45
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 35
+        width: 138
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388a773b221db2b4bbad26f9d2c59611
+      internalID: 520626207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_46
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 35
+        width: 137
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9d021f1af37e34ba27ab8a0900b583
+      internalID: -553092982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_47
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 35
+        width: 148
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a75c03e6cdfc14ca8923c72d800619
+      internalID: -2044074654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_48
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 27
+        width: 168
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e13f87cf6e06b647b2c9cfdb319aadd
+      internalID: -143340472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_49
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 35
+        width: 158
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cc0d83d21f1804aa30ec290964d997
+      internalID: -715323718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_50
+      rect:
+        serializedVersion: 2
+        x: 3298
+        y: 35
+        width: 135
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a71f071c368fc4b886c3b3c3dda78a
+      internalID: -1386388506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_51
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 35
+        width: 138
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323ed9e589b84194caf53f999623f212
+      internalID: 1651433114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_52
+      rect:
+        serializedVersion: 2
+        x: 4577
+        y: 35
+        width: 135
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b9f3e00176ef341aea6e495a07eb82
+      internalID: 2115325560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG Walk Cycle_53
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 35
+        width: 138
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af042df9470b8ed46a83c85cfe410f51
+      internalID: -1183966617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RPG Walk Cycle_0: 1573964804
+      RPG Walk Cycle_1: 1088914283
+      RPG Walk Cycle_10: -588800012
+      RPG Walk Cycle_11: -285056274
+      RPG Walk Cycle_12: -1400552155
+      RPG Walk Cycle_13: 2128425600
+      RPG Walk Cycle_14: 48189958
+      RPG Walk Cycle_15: 1913409632
+      RPG Walk Cycle_16: -510143835
+      RPG Walk Cycle_17: 9180110
+      RPG Walk Cycle_18: -1484658729
+      RPG Walk Cycle_19: 585245039
+      RPG Walk Cycle_2: 965719339
+      RPG Walk Cycle_20: -924150226
+      RPG Walk Cycle_21: 1969688735
+      RPG Walk Cycle_22: -1489593611
+      RPG Walk Cycle_23: -954752226
+      RPG Walk Cycle_24: 922337577
+      RPG Walk Cycle_25: 578038185
+      RPG Walk Cycle_26: -2026407515
+      RPG Walk Cycle_27: 2062325354
+      RPG Walk Cycle_28: 1271472890
+      RPG Walk Cycle_29: -1922425807
+      RPG Walk Cycle_3: -1658979147
+      RPG Walk Cycle_30: -1454171269
+      RPG Walk Cycle_31: 1220451568
+      RPG Walk Cycle_32: 2122098149
+      RPG Walk Cycle_33: 1720275972
+      RPG Walk Cycle_34: 2083882261
+      RPG Walk Cycle_35: -694685372
+      RPG Walk Cycle_36: 1989585949
+      RPG Walk Cycle_37: -6306079
+      RPG Walk Cycle_38: 742199315
+      RPG Walk Cycle_39: 418307461
+      RPG Walk Cycle_4: 1264941055
+      RPG Walk Cycle_40: -1095489019
+      RPG Walk Cycle_41: 629272308
+      RPG Walk Cycle_42: 743700290
+      RPG Walk Cycle_43: -1566927508
+      RPG Walk Cycle_44: -1270279926
+      RPG Walk Cycle_45: 520626207
+      RPG Walk Cycle_46: -553092982
+      RPG Walk Cycle_47: -2044074654
+      RPG Walk Cycle_48: -143340472
+      RPG Walk Cycle_49: -715323718
+      RPG Walk Cycle_5: -658369041
+      RPG Walk Cycle_50: -1386388506
+      RPG Walk Cycle_51: 1651433114
+      RPG Walk Cycle_52: 2115325560
+      RPG Walk Cycle_53: -1183966617
+      RPG Walk Cycle_6: -1641538338
+      RPG Walk Cycle_7: 364168589
+      RPG Walk Cycle_8: 775801811
+      RPG Walk Cycle_9: -547044166
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
