@@ -13,7 +13,7 @@ public class RandomSpawBuff : MonoBehaviour
    // private Transform LocationBuff;
     void Start()
     {
-        Spaw_Buff();
+       
     }
 
     
