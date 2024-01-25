@@ -4,65 +4,33 @@ using UnityEngine;
 
 public class BuffManager : MonoBehaviour
 {
-    public float BuffSpeedTime;
+    public SpeedBuff speedBuff;
+    public KnockbackBuff knockbackBuff;
+    public GiantBuff giantBuff;
+    public GodBuff godBuff;
 
-    public float BuffDuration;
-
-   // PlayerController playerController;
-
-    public BuffName buffName;
-
-    public enum BuffName
-    {
-        None,
-        Speed
-    }
-
-    public void Start()
-    {
-        
-    }
+    public PlayerBuffHolder playerBuffHolder;
     public void Update()
     {
-        if (buffName == BuffName.Speed)
+        if (Input.GetKeyDown(KeyCode.F1))
         {
-            BuffDuration-= Time.deltaTime;
-            
+            GivePlayerBuff(PlayerBuffHolder.BuffName.Speed);
         }
-        if (BuffDuration <= 0)
+        if (Input.GetKeyDown(KeyCode.F2))
         {
-            buffName = BuffName.None;
-            BuffDuration = 0;
+            GivePlayerBuff(PlayerBuffHolder.BuffName.Knockback);
         }
-
-        if(Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F3))
         {
-            GetBuff(BuffName.Speed);
-            buffName = BuffName.Speed;
+            GivePlayerBuff(PlayerBuffHolder.BuffName.Giant);
+        }
+        if (Input.GetKeyDown(KeyCode.F4))
+        {
+            GivePlayerBuff(PlayerBuffHolder.BuffName.God);
         }
     }
-
-    public void GetBuff(BuffName buffName)
+    public void GivePlayerBuff(PlayerBuffHolder.BuffName buff)
     {
-        switch (buffName)
-        {
-            
-            case BuffName.None:
-              //  playerController.force = 2;
-                break;
-
-            case BuffName.Speed:
-
-                BuffDuration = BuffSpeedTime;
-                buffName = BuffName.Speed;
-              //  playerController.force = 10;
-               
-                
-                break;
-        }
+        playerBuffHolder.PlayerGetBuff(buff);
     }
-   
-    
-
-
 }
