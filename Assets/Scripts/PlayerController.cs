@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Color PlayerColor;
+    public SpriteRenderer playerHands;
     [Header("PlayerStat")]
     public float playerHP;
     public float playerDamage;
@@ -33,9 +35,12 @@ public class PlayerController : MonoBehaviour
     public float attackSpeedBuff = 1;
     public float knockbackProtectionBuff = 1;
     public float damageBuff = 1;
+
+    public bool isDead;
     // Start is called before the first frame update
     void Start()
     {
+        playerHands.color = PlayerColor;
         attackDelayTimer = attackDelay;
         //anim = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
@@ -57,34 +62,48 @@ public class PlayerController : MonoBehaviour
             CanAttack = true;
         }
 
-        ClickMouseAttack();
-        InputKey = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (!isDead)
+        {
+            ClickMouseAttack();
+            InputKey = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        }
 
         anim.SetFloat("Horizontal", InputKey.x);
         anim.SetFloat("Vertical", InputKey.z);
         anim.SetFloat("Speed", InputKey.sqrMagnitude);
 
-        if(InputKey.x >= 0.5f)
+        if(InputKey.x >= 0.1f)
         {
             pivotHitBox.transform.eulerAngles = new Vector3(0, -90, 0);
+            //rb.AddForce(transform.forward * moveSpeed * speedBuff);
         }
-        else if(InputKey.x <= -0.5f)
+        else if(InputKey.x <= -0.1f)
         {
             pivotHitBox.transform.eulerAngles = new Vector3(0, 90, 0);
         }
-        else if(InputKey.z >= 0.5f)
+        else if(InputKey.z >= 0.1f)
         {
             pivotHitBox.transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        else if (InputKey.z <= -0.5f)
+        else if (InputKey.z <= -0.1f)
         {
             pivotHitBox.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            pivotHitBox.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
+        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+        {
+            InputKey = Vector3.zero;
         }
     }
 
     private void FixedUpdate()
     {
         rb.MovePosition((Vector3) transform.position + ((InputKey * moveSpeed)* speedBuff) * Time.deltaTime);
+        //rb.AddForce(InputKey * moveSpeed * speedBuff);
         rb.mass = knockbackProtectionBuff;
     }
 

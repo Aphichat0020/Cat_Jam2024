@@ -21,9 +21,18 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 754156119, guid: 260dc0718bd112b48bff865e66ace8b6, type: 3}
+      value: {fileID: 7384724554758465076, guid: cfa43e53deabec04bb07904b93dd2cf5, type: 3}
     attribute: m_Sprite
-    path: 
+    path: GameObject/Character
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -7229933670351641489, guid: c6a62b12cca6a7e4aabfa396928656f6, type: 3}
+    attribute: m_Sprite
+    path: GameObject/PlayerHands
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -35,7 +44,16 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 2882896885
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 903971682
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -44,7 +62,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 754156119, guid: 260dc0718bd112b48bff865e66ace8b6, type: 3}
+    - {fileID: 7384724554758465076, guid: cfa43e53deabec04bb07904b93dd2cf5, type: 3}
+    - {fileID: -7229933670351641489, guid: c6a62b12cca6a7e4aabfa396928656f6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

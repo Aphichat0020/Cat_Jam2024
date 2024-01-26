@@ -55,6 +55,7 @@ public class AreaKnockbackOnCollision : MonoBehaviour
                 if (rb != null)
                 {
                     if (rb.tag != "Player")
+
                     {
                         print(rb.name);
                         rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
@@ -64,13 +65,15 @@ public class AreaKnockbackOnCollision : MonoBehaviour
         }
         else
         {
-            if (collision.gameObject.tag != "Enemy")
+            if (collision.gameObject.tag == "Enemy")
             {
 
                 Rigidbody rb = collision.GetComponent<Rigidbody>();
 
                 if (rb != null)
                 {
+
+                    print(collision.gameObject.name);
                     if (rb.tag != "Player")
                     {
                         print(rb.name);

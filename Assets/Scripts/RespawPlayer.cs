@@ -8,11 +8,12 @@ using TMPro;
 public class RespawPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
+    PlayerController playerController;
     public float Max_Cooldown;
     public float _Cooldown;
     public GameObject UI_Respaw;
     public TextMeshProUGUI Cooldown_Text;
-    public bool isDie = false;
+    public bool isDaed = false;
    
     public Transform[] spawPoints;
     public Transform MyLocation;
@@ -20,13 +21,13 @@ public class RespawPlayer : MonoBehaviour
     Rigidbody rb;
     public void Start()
     {
+        playerController = GetComponentInParent<PlayerController>();
         rb = GetComponent<Rigidbody>(); 
     }
     public void Update()
     {
-        if (isDie)
+        if (isDaed)
         {
-            UI_Respaw.SetActive(true); 
              _Cooldown -=  Time.deltaTime;
               Cooldown_Text.text =Mathf.Round(_Cooldown).ToString();    
             if (_Cooldown <= 0)
@@ -39,13 +40,25 @@ public class RespawPlayer : MonoBehaviour
         }
        
     }
+
+    public void PlayerDead()
+    {
+        UI_Respaw.SetActive(true);
+        isDaed = true;
+
+        rb.isKinematic = true;
+        rb.velocity = Vector3.zero;
+        rb.useGravity = false;
+
+        _Cooldown = Max_Cooldown;
+    }
+
     public void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "OutMap")
         {
             Debug.Log("Hit");
-           // spaw_Player();
-            Cooldown_SpawPlayer();
+            PlayerDead();
         } 
     }
    
@@ -55,18 +68,6 @@ public class RespawPlayer : MonoBehaviour
         rb.useGravity = true;
         rb.isKinematic = false;
         MyLocation.transform.position = spawPoints[Random.Range(0, spawPoints.Length)].transform.position;
-        //MyLocation.transform.position = spawPoints;
-        isDie = false;
-
-
-    }
-    public void Cooldown_SpawPlayer()
-    {
-        isDie = true;
-        rb.isKinematic = true;
-        rb.velocity = Vector3.zero;
-        rb.useGravity = false;
-
-        _Cooldown = Max_Cooldown;
+        isDaed = false;
     }
 }

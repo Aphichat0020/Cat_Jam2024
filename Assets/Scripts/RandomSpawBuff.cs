@@ -26,21 +26,18 @@ public class RandomSpawBuff : MonoBehaviour
     }
     public void Spaw_Buff()
     {
-        // PositionBuff = PositionBuff[Random.Range(0, PositionBuff.Length)];
         IsBuffinGameNow = Instantiate(ObjectBuff[Random.Range(0, ObjectBuff.Length)],PositionBuff[Random.Range(0, PositionBuff.Length)]);
-      // StartCoroutine(TimeDestroyBuff());
     }
     public void GetBuff()
     {
         Destroy(IsBuffinGameNow);
-        //Player have buff
-        // 
+
     }
     IEnumerator TimeDestroyBuff()
     {
         yield return new WaitForSeconds(TimeChangBuff);
         Destroy(IsBuffinGameNow);
-       // Spaw_Buff();
+
     }
 
 }

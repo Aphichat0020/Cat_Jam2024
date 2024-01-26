@@ -1,0 +1,632 @@
+fileFormatVersion: 2
+guid: c6a62b12cca6a7e4aabfa396928656f6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 200
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638418938392928684
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: CatHand_Frame_0
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 150
+      height: 30
+    spriteID: d6648ca111182af47b946f49030f1151
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: CatHand_Frame_1
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 4
+      width: 150
+      height: 30
+    spriteID: b6867799bc6798d418585166b4c11d7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 4}
+  - name: CatHand_Frame_2
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 4
+      width: 150
+      height: 30
+    spriteID: efbec9e39433ee444860e563e8c30b6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 320, y: 4}
+  - name: CatHand_Frame_3
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 42
+      width: 150
+      height: 30
+    spriteID: c94d8ca5b0b7f9e45ab32f1860875f49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 42}
+  - name: CatHand_Frame_4
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 42
+      width: 150
+      height: 30
+    spriteID: c51f4e043bb013e47a835c2535a0a4ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 42}
+  - name: CatHand_Frame_5
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 42
+      width: 150
+      height: 30
+    spriteID: 9ef296b810c5ff64d8bd52715ee7df5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 320, y: 42}
+  - name: CatHand_Frame_6
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 150
+      height: 30
+    spriteID: 7c842c8d014154740837d428946ca116
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: CatHand_Frame_7
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 80
+      width: 150
+      height: 30
+    spriteID: 9a42060bcd29a0a4fbef4bae10e5ec8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 80}
+  - name: CatHand_Frame_8
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 80
+      width: 150
+      height: 30
+    spriteID: 8c1e9211cb4b99643a27213b7166ef2a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 320, y: 80}
+  - name: CatHand_Frame_9
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 118
+      width: 150
+      height: 30
+    spriteID: 9252e77e7df1ad54fa59665a65dffcbf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 118}
+  - name: CatHand_Frame_10
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 118
+      width: 150
+      height: 30
+    spriteID: b75eea458a429e24599f927d55b69162
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 118}
+  - name: CatHand_Frame_11
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 118
+      width: 150
+      height: 30
+    spriteID: bb1ade4be85265f4c93f03b21abf2b42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 320, y: 118}
+  - name: CatHand_Frame_12
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 156
+      width: 150
+      height: 30
+    spriteID: 3974659cbd7f35d4997733a2d4d9e095
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 156}
+  - name: CatHand_Frame_13
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 156
+      width: 150
+      height: 30
+    spriteID: 616653585faca51439eada5977f81602
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 156}
+  - name: CatHand_Frame_14
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.1666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 156
+      width: 150
+      height: 30
+    spriteID: 000b84f0ea4acd843b1512819a309b23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 320, y: 156}
+  - name: CatHand_Frame_15
+    originalName: 
+    pivot: {x: 0.4666667, y: 1.8333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 194
+      width: 150
+      height: 30
+    spriteID: 864c3a898ecf5d5439989d864c9918f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 194}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1149038061
+    name: CatHand
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: CatHand_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: d6648ca111182af47b946f49030f1151
+    - name: CatHand_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: b6867799bc6798d418585166b4c11d7c
+    - name: CatHand_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: efbec9e39433ee444860e563e8c30b6c
+    - name: CatHand_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: c94d8ca5b0b7f9e45ab32f1860875f49
+    - name: CatHand_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: c51f4e043bb013e47a835c2535a0a4ea
+    - name: CatHand_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: 9ef296b810c5ff64d8bd52715ee7df5a
+    - name: CatHand_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: 7c842c8d014154740837d428946ca116
+    - name: CatHand_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: 9a42060bcd29a0a4fbef4bae10e5ec8f
+    - name: CatHand_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: 8c1e9211cb4b99643a27213b7166ef2a
+    - name: CatHand_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: 9252e77e7df1ad54fa59665a65dffcbf
+    - name: CatHand_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: b75eea458a429e24599f927d55b69162
+    - name: CatHand_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: bb1ade4be85265f4c93f03b21abf2b42
+    - name: CatHand_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: 3974659cbd7f35d4997733a2d4d9e095
+    - name: CatHand_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: 616653585faca51439eada5977f81602
+    - name: CatHand_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 50
+        y: 70
+        width: 150
+        height: 30
+      spriteId: 000b84f0ea4acd843b1512819a309b23
+    - name: CatHand_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 50
+        y: 50
+        width: 150
+        height: 30
+      spriteId: 864c3a898ecf5d5439989d864c9918f9
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 240, y: 210}
