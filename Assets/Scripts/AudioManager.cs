@@ -18,13 +18,13 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] List<AudioClip> BGMClips = new List<AudioClip>();
     //public GameObject Start_G;
-    public bool Imback = false;
+   
 
     public const string MUSIC_KEY = "musicVolume";
     public const string SFX_KEY = "sfxVolume";
 
-    public bool openSFX;
-    public int alternate_Sound_Shoot;
+ 
+    
    
 
     void Awake()
@@ -32,33 +32,30 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            // DontDestroyOnLoad(gameObject);
+            
         }
         else
         {
-            // Destroy(gameObject);
+           
         }
     }
     public void Start()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
-        alternate_Sound_Shoot = 0;
-        if (SceneManager.GetActiveScene().name == "Location-basedGame")
-        {
-            BGM1();
-           
-
-        }
-        // if (SceneManager.GetActiveScene().name == "AR_Team_Winner")
-        // {
-        //     BGM2();
-        // }
+      
     }
-   
-    public void ClickSFX_Shoot()
+    public void Update()
     {
-        AudioClip clip = ClickClips[0];
-        ClickSource.PlayOneShot(clip);
+        ClickSFX_Attack();
+    }
+
+    public void ClickSFX_Attack()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            AudioClip clip = ClickClips[0];
+            ClickSource.PlayOneShot(clip);
+        }
+       
     }
  
 
