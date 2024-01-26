@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditorInternal;
 using UnityEngine;
+using TMPro;
 
 public class RespawPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
     public float Max_Cooldown;
     public float _Cooldown;
+    public GameObject UI_Respaw;
+    public TextMeshProUGUI Cooldown_Text;
     public bool isDie = false;
    
     public Transform[] spawPoints;
@@ -23,14 +26,15 @@ public class RespawPlayer : MonoBehaviour
     {
         if (isDie)
         {
-           
-            _Cooldown -= Time.deltaTime;
-
+            UI_Respaw.SetActive(true); 
+             _Cooldown -=  Time.deltaTime;
+              Cooldown_Text.text =Mathf.Round(_Cooldown).ToString();    
             if (_Cooldown <= 0)
             {
                 _Cooldown = 0;
                 
                 spaw_Player();
+                UI_Respaw.SetActive(false);
             }
         }
        
