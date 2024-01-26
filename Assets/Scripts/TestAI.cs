@@ -33,18 +33,18 @@ public class TestAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float distanceTarget = Vector3.Distance(transform.position, pointToMove);
+        float distanceTarget = Vector3.Distance(transform.position, pointToMove);
 
-        //if (distanceTarget <= 2)
-        //{
-        //    agent.isStopped = true;
-        //    pointToMove = GetRandomPointOnNavMesh();
-        //}
-        //else
-        //{
-        //   agent.SetDestination(pointToMove);
-        //    agent.isStopped = false;
-        //}
+        if (distanceTarget <= 2)
+        {
+            agent.isStopped = true;
+            pointToMove = GetRandomPointOnNavMesh();
+        }
+        else
+        {
+           agent.SetDestination(pointToMove);
+            agent.isStopped = false;
+        }
 
 
         //////////////
