@@ -1414,7 +1414,6 @@ GameObject:
   - component: {fileID: 713826226}
   - component: {fileID: 713826229}
   - component: {fileID: 713826227}
-  - component: {fileID: 713826230}
   - component: {fileID: 713826231}
   - component: {fileID: 713826225}
   - component: {fileID: 713826233}
@@ -1437,8 +1436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f826c7a9b2fb7946b4c3034796c8bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHP: 0
+  playerDamage: 0
   moveSpeed: 3
-  InputKey: {x: 0, y: 0, z: 0}
   anim: {fileID: 867123582}
   pivotHitBox: {fileID: 27725548}
   isAOE_Attack: 0
@@ -1454,6 +1454,7 @@ MonoBehaviour:
   KnockbackRadiusBuff: 1
   attackSpeedBuff: 1
   knockbackProtectionBuff: 1
+  damageBuff: 1
 --- !u!212 &713826226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1495,7 +1496,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1573964804, guid: 7ff81029fc0bac44f87d28aa757c80b5, type: 3}
+  m_Sprite: {fileID: -1569751936, guid: 7c8de8927748bda4d898b2939861911d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1571,27 +1572,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!95 &713826230
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713826224}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc4aaaa67e04ed049a0cedf410ef80b3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &713826231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1606,6 +1586,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Max_Cooldown: 0
   _Cooldown: 0
+  UI_Respaw: {fileID: 0}
+  Cooldown_Text: {fileID: 0}
   isDie: 0
   spawPoints:
   - {fileID: 1548982609}
@@ -1854,7 +1836,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1890285440, guid: 260dc0718bd112b48bff865e66ace8b6, type: 3}
+  m_Sprite: {fileID: -1197340938, guid: 7c8de8927748bda4d898b2939861911d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody rb;
+    [Header("PlayerStat")]
+    public float playerHP;
+    public float playerDamage;
     public float moveSpeed;
-    public Vector3 InputKey;
+    Rigidbody rb;
+    Vector3 InputKey;
     public Animator anim;
 
     [Header("Attack")]
@@ -29,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public float KnockbackRadiusBuff = 1;
     public float attackSpeedBuff = 1;
     public float knockbackProtectionBuff = 1;
+    public float damageBuff = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("Horizontal", InputKey.x);
         anim.SetFloat("Vertical", InputKey.z);
+        anim.SetFloat("Speed", InputKey.sqrMagnitude);
 
         if(InputKey.x >= 0.5f)
         {
