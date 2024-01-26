@@ -4,37 +4,79 @@ using UnityEngine;
 
 public class AreaKnockbackOnCollision : MonoBehaviour
 {
-    [SerializeField]
+    public PlayerController playerController;
+    public GameObject player;
     private float KnockbackStrength;
-    [SerializeField]
     private float KnockbackRadius;
 
+    public void Start()
+    {
+        playerController= gameObject.GetComponentInParent<PlayerController>();
+    }
+    public void Update()
+    {
+        if (playerController)
+        {
+            KnockbackStrength = playerController.totalKnockbackStrength;
+            KnockbackRadius = playerController.totalKnockbackRadius_AOE;
+        }
+        else
+        {
+            playerController.GetComponentInParent<PlayerController>();
+        }
+    }
     public void OnCollisionEnter(Collision collision)
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, KnockbackRadius);
-        for (int i = 0;i<colliders.Length; i++)
+        if (collision.gameObject.tag != "Player")
         {
-
-            Rigidbody rb = colliders[i].GetComponent<Rigidbody>();  
-
-            if (rb != null)
+            Collider[] colliders = Physics.OverlapSphere(transform.position, KnockbackRadius);
+            for (int i = 0; i < colliders.Length; i++)
             {
-                rb.AddExplosionForce(KnockbackStrength,transform.position, KnockbackRadius ,0f ,ForceMode.Impulse);
+
+                Rigidbody rb = colliders[i].GetComponent<Rigidbody>(); 
+                if (rb != null)
+                {
+                    rb.AddExplosionForce(KnockbackStrength, transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                }
+
             }
         }
 
     }
     public void OnTriggerEnter(Collider collision)
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, KnockbackRadius);
-        for (int i = 0; i < colliders.Length; i++)
+        if (playerController.isAOE_Attack)
         {
-
-            Rigidbody rb = colliders[i].GetComponent<Rigidbody>();
-
-            if (rb != null)
+            Collider[] colliders = Physics.OverlapSphere(transform.position, KnockbackRadius);
+            for (int i = 0; i < colliders.Length; i++)
             {
-                rb.AddExplosionForce(KnockbackStrength, transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                Rigidbody rb = colliders[i].GetComponent<Rigidbody>();
+
+                if (rb != null)
+                {
+                    if (rb.tag != "Player")
+                    {
+                        print(rb.name);
+                        rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (collision.gameObject.tag != "Enemy")
+            {
+
+                Rigidbody rb = collision.GetComponent<Rigidbody>();
+
+                if (rb != null)
+                {
+                    if (rb.tag != "Player")
+                    {
+                        print(rb.name);
+                        rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                    }
+                }
             }
         }
     }

@@ -7,11 +7,6 @@ public class Attack : MonoBehaviour
     public GameObject Hitbox;
     public bool CanAttack;
 
-
-    public void Start()
-    {
-       
-    }
     void Update()
     {
         ClickMouseAttack();
@@ -26,7 +21,6 @@ public class Attack : MonoBehaviour
                 StartCoroutine(WaitCooldownAttack());
             }
         }
-       
     }
     IEnumerator WaitCooldownAttack()
     {
