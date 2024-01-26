@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.SceneManagement;
 using System;
 
 public class AudioManager : MonoBehaviour
@@ -17,70 +16,27 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource BGM;
 
     [SerializeField] List<AudioClip> BGMClips = new List<AudioClip>();
-    //public GameObject Start_G;
-   
+    
+    
 
     public const string MUSIC_KEY = "musicVolume";
     public const string SFX_KEY = "sfxVolume";
 
- 
-    
-   
 
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            
-        }
-        else
-        {
-           
-        }
-    }
+    // Start is called before the first frame update
+
+
+
     public void Start()
     {
-      
+        //BGM_1();
     }
-    public void Update()
+    public void BGM_1()
     {
-        ClickSFX_Attack();
+        AudioClip clip = ClickClips[0];
+        ClickSource.PlayOneShot(clip);
     }
 
-    public void ClickSFX_Attack()
-    {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            AudioClip clip = ClickClips[0];
-            ClickSource.PlayOneShot(clip);
-        }
-       
-    }
- 
-
-
-    public void BGM1()
-    {
-        AudioClip clipBGM = BGMClips[0];
-        BGM.clip = BGMClips[0];
-        BGM.Play();
-
-    }
-   
-
-    public void stopbgm()
-    {
-        BGM.Stop();
-        Debug.Log("stop");
-    }
-    public void stopSFX()
-    {
-        ClickSource.Stop();
-        Debug.Log("stop");
-    }
-
-  
     public void LoadVolum()//Volum saved in VolumSetting.cs
     {
         float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
