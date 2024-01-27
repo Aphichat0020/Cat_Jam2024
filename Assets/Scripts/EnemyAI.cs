@@ -62,11 +62,11 @@ public class EnemyAI : MonoBehaviour
 
             
         player = GameObject.FindGameObjectWithTag("Player");
-      //  player2 = GameObject.FindGameObjectWithTag("Player2");
+       player2 = GameObject.FindGameObjectWithTag("Player2");
  
         agent = GetComponent<NavMeshAgent>();
         ListTarget.Add(player);
-       // ListTarget.Add(player2);
+        ListTarget.Add(player2);
        
        
         foreach (GameObject target in GameObject.FindGameObjectsWithTag("Enemy"))
