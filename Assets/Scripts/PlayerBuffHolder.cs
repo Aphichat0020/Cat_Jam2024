@@ -16,6 +16,13 @@ public class PlayerBuffHolder : MonoBehaviour
     public GodBuff godBuff;
     public bool hasBuff;
     bool checkReset;
+
+    public GameObject normalCat;
+    public Animator normalCatAnimator;
+    [Header("KnockBack")]
+    public GameObject StrongCat;
+    public Animator StrongCatAnimator;
+
     public enum BuffName
     {
         None,
@@ -71,6 +78,9 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.knockbackBuff = knockbackBuff.forceAttack;
                 playerController.knockbackProtectionBuff = knockbackBuff.knockbackProtection;
                 duration = knockbackBuff.duration;
+                playerController.anim = StrongCatAnimator;
+                normalCat.SetActive(false);
+                StrongCat.SetActive(true);
                 break;
             case BuffName.Giant:
                 curretBuff = BuffName.Giant;
@@ -101,5 +111,8 @@ public class PlayerBuffHolder : MonoBehaviour
         playerController.attackSpeedBuff = 1;
         playerController.knockbackProtectionBuff = 1;
         playerController.isAOE_Attack = false;
+        playerController.anim = normalCatAnimator;
+        StrongCat.SetActive(false);
+        normalCat.SetActive(true);
     }
 }
