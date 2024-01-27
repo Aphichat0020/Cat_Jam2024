@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Speed
   buffName: 1
   duration: 20
-  speed: 3
-  attackSpeed: 1.5
-  knockbackProtection: 1
+  speed: 2
+  attackSpeed: 2
+  knockbackProtection: 2
