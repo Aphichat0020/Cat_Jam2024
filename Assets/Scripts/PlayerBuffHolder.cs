@@ -78,6 +78,7 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.speedBuff = speedBuff.speed;
                 playerController.attackSpeedBuff = speedBuff.attackSpeed;
                 duration = speedBuff.duration;
+                playerController.damageBuff = speedBuff.attackDamage;
 
                 playerController.anim = SpeedCatAnimator;
                 normalCat.SetActive(false);
@@ -90,6 +91,7 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.knockbackBuff = knockbackBuff.forceAttack;
                 playerController.knockbackProtectionBuff = knockbackBuff.knockbackProtection;
                 duration = knockbackBuff.duration;
+                playerController.damageBuff = knockbackBuff.attackDamage;
 
                 playerController.anim = StrongCatAnimator;
                 normalCat.SetActive(false);
@@ -105,6 +107,7 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.knockbackProtectionBuff = giantBuff.knockbackProtection;
                 playerController.isAOE_Attack = true;
                 duration = giantBuff.duration;
+                playerController.damageBuff = giantBuff.attackDamage;
 
                 playerController.anim = FatCatAnimator;
                 normalCat.SetActive(false);
@@ -119,6 +122,8 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.knockbackBuff = godBuff.forceAttack;
                 playerController.knockbackProtectionBuff = godBuff.knockbackProtection;
                 duration = godBuff.duration;
+                playerController.damageBuff = godBuff.attackDamage;
+
                 break;
         }
         checkReset = false;

@@ -14,5 +14,6 @@ public class GiantBuff : ScriptableObject
     public float shield;
     public float forceAttack;
     public float knockbackProtection;
+    public float attackDamage;
 
 }

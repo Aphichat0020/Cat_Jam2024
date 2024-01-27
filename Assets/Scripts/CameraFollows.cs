@@ -28,7 +28,7 @@ public class CameraFollows : MonoBehaviour
    
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag(TagPlayer).transform;
+       
     }
     void OnEnable()
     {
@@ -38,6 +38,11 @@ public class CameraFollows : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!player)
+        {
+            player = GameObject.FindGameObjectWithTag(TagPlayer).transform;
+        }
+
         transform.position = player.transform.position + new Vector3(0, 3, -3);
     }
     public void shake()

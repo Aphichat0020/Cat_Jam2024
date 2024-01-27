@@ -20,3 +20,4 @@ MonoBehaviour:
   shield: 1000
   forceAttack: 2
   knockbackProtection: 10
+  attackDamage: 40

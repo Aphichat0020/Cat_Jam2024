@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2669326359524273710}
   - component: {fileID: 768395968368258145}
-  - component: {fileID: 2396770506109927487}
   - component: {fileID: 9136582583634226324}
   - component: {fileID: 1792728942268176818}
   - component: {fileID: 494918773550716621}
@@ -18,6 +17,7 @@ GameObject:
   - component: {fileID: 7337145781323977286}
   - component: {fileID: 2635381388764854379}
   - component: {fileID: 3836607841350974349}
+  - component: {fileID: 3343551870050088918}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -32,7 +32,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756496663215634432}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.16, y: 0.76, z: -12.98}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -42,7 +42,7 @@ Transform:
   - {fileID: 560680242849496326}
   - {fileID: 4376151287342287279}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &768395968368258145
 CapsuleCollider:
@@ -66,27 +66,6 @@ CapsuleCollider:
   m_Radius: 0.2794872
   m_Height: 1.023194
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &2396770506109927487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756496663215634432}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9136582583634226324
 Animator:
@@ -198,13 +177,15 @@ MonoBehaviour:
   agent: {fileID: 0}
   ListTarget: []
   player: {fileID: 0}
+  player2: {fileID: 0}
   NearestOBJ: {fileID: 0}
   normalizedMovement: {x: 0, y: 0, z: 0}
   stopDistance: 1
   EnemyrColor: {r: 0, g: 0, b: 0, a: 0}
   enemyHands: []
+  MaxHP: 100
   EnemyHP: 100
-  EnemyDamage: 0
+  EnemyDamage: 10
   moveSpeed: 2
   anim: {fileID: 9136582583634226324}
   pivotHitBox: {fileID: 560680242849496326}
@@ -218,6 +199,7 @@ MonoBehaviour:
   attackEffectOBJ: {fileID: 6779055298419093032, guid: 82ebeff28badcdf4f99567314f681088, type: 3}
   totalKnockbackStrength: 0
   totalKnockbackRadius_AOE: 0
+  totalEnemyDamage: 0
   speedBuff: 1
   knockbackBuff: 1
   KnockbackRadiusBuff: 1
@@ -367,6 +349,29 @@ MonoBehaviour:
   BetweenAI: 0
   RangAI_Attack: 0
   RangAI_RandomWalkDistance: 0
+--- !u!114 &3343551870050088918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756496663215634432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabb09a4a5a38ad47b4063f472b4c738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Cooldown: 0
+  Max_Cooldown: 0.1
+  isDaed: 0
+  spawPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  MyLocation: {fileID: 0}
 --- !u!1 &1315999349117146541
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,8 +517,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2401929435118071803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.048, z: 0.838}
-  m_LocalScale: {x: 1.7112, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.048, z: 1.114}
+  m_LocalScale: {x: 1.4476373, y: 0.8459779, z: 0.8459779}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560680242849496326}

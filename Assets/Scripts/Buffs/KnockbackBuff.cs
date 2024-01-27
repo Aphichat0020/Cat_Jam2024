@@ -11,4 +11,5 @@ public class KnockbackBuff : ScriptableObject
     public float duration;
     public float forceAttack;
     public float knockbackProtection;
+    public float attackDamage;
 }

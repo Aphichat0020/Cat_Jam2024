@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.FilePathAttribute;
 
 public class RespawPlayer : MonoBehaviour
 {
@@ -13,16 +14,15 @@ public class RespawPlayer : MonoBehaviour
     public TextMeshProUGUI Cooldown_Text;
     public bool isDaed = false;
     public PlayerBuffHolder playerBuffHolder;
+    Rigidbody rb;
 
     public Transform[] spawPoints;
     public Transform MyLocation;
 
-    Rigidbody rb;
     public void Start()
     {
         playerBuffHolder = GetComponent<PlayerBuffHolder>();
         playerController = GetComponentInParent<PlayerController>();
-        rb = GetComponent<Rigidbody>(); 
     }
     public void Update()
     {
@@ -41,35 +41,28 @@ public class RespawPlayer : MonoBehaviour
        
     }
 
-    public void PlayerDead()
+    public void PlayerDead(GameObject player)
     {
+        MyLocation = player.transform;
+        playerController = MyLocation.GetComponent<PlayerController>();
+        playerBuffHolder = MyLocation.GetComponent<PlayerBuffHolder>();
+        rb = MyLocation.GetComponent<Rigidbody>();
+
         UI_Respaw.SetActive(true);
         isDaed = true;
 
-        rb.isKinematic = true;
-        rb.velocity = Vector3.zero;
-        rb.useGravity = false;
         playerController.isDead = true;
 
         _Cooldown = Max_Cooldown;
     }
-
-    public void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.tag == "OutMap")
-        {
-            Debug.Log("Hit");
-            PlayerDead();
-        } 
-    }
    
     public void spaw_Player()
     {
+        rb.velocity = Vector3.zero;
+        playerController.playerHP = playerController.MaxHP;
         playerBuffHolder.PlayerBuffReset();
         playerController.isDead = false;
-        rb.velocity = Vector3.zero;
-        rb.useGravity = true;
-        rb.isKinematic = false;
+
         MyLocation.transform.position = spawPoints[Random.Range(0, spawPoints.Length)].transform.position;
         isDaed = false;
     }
