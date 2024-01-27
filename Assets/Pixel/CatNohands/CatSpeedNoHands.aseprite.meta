@@ -1,0 +1,632 @@
+fileFormatVersion: 2
+guid: 5da4df7b07e45f74aa79f6caaa0fd594
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 200
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638419918792146288
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: CatSpeedNoHands_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 170
+      height: 360
+    spriteID: c9cff9cc11001454b97a81bcaa23ce07
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: CatSpeedNoHands_Frame_1
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1476
+      width: 170
+      height: 340
+    spriteID: a1b3d0fc4a0027248a6c8ae06c3d25d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1476}
+  - name: CatSpeedNoHands_Frame_2
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 372
+      width: 170
+      height: 360
+    spriteID: 27526a87ef65122468f2ac2780a9ca35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 372}
+  - name: CatSpeedNoHands_Frame_3
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 4
+      width: 170
+      height: 340
+    spriteID: f6cfc5b98c2db6e47b5c547d1b1f74a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 4}
+  - name: CatSpeedNoHands_Frame_4
+    originalName: 
+    pivot: {x: 0.49999994, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1396
+      width: 150
+      height: 360
+    spriteID: bf938cc37a6ceeb41a5fc2fbc412dca9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1396}
+  - name: CatSpeedNoHands_Frame_5
+    originalName: 
+    pivot: {x: 0.46874997, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 4
+      width: 160
+      height: 340
+    spriteID: 7a997588ed684b34ab2618be3374eedf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 4}
+  - name: CatSpeedNoHands_Frame_6
+    originalName: 
+    pivot: {x: 0.46874997, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 1048
+      width: 160
+      height: 360
+    spriteID: 7aa40345b21c4b54b9b3b200ead3a017
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 1048}
+  - name: CatSpeedNoHands_Frame_7
+    originalName: 
+    pivot: {x: 0.46874997, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 352
+      width: 160
+      height: 340
+    spriteID: bd0ad090e9fb5864a96418e469f0e747
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 352}
+  - name: CatSpeedNoHands_Frame_8
+    originalName: 
+    pivot: {x: 0.49999994, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 528
+      y: 4
+      width: 150
+      height: 360
+    spriteID: e774498d46bdb2f44b4e29988031df54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 528, y: 4}
+  - name: CatSpeedNoHands_Frame_9
+    originalName: 
+    pivot: {x: 0.53124994, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 700
+      width: 160
+      height: 340
+    spriteID: fbc8b12c833f0a0409243cf9929ec872
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 700}
+  - name: CatSpeedNoHands_Frame_10
+    originalName: 
+    pivot: {x: 0.53124994, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 1416
+      width: 160
+      height: 360
+    spriteID: 063290ef54891684bafd73adf599e9a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 1416}
+  - name: CatSpeedNoHands_Frame_11
+    originalName: 
+    pivot: {x: 0.53124994, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1048
+      width: 160
+      height: 340
+    spriteID: 1b14b0074faeaa048a89efd81c6c10c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1048}
+  - name: CatSpeedNoHands_Frame_12
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 740
+      width: 170
+      height: 360
+    spriteID: 323459afc9f66814da0601414f1e8321
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 740}
+  - name: CatSpeedNoHands_Frame_13
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 352
+      width: 170
+      height: 340
+    spriteID: d931a64e7e994d943a0e37b59c5a136a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 352}
+  - name: CatSpeedNoHands_Frame_14
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.5833333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1108
+      width: 170
+      height: 360
+    spriteID: ab7785c07ed1d3c478adb6814f462577
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1108}
+  - name: CatSpeedNoHands_Frame_15
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.61764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 700
+      width: 170
+      height: 340
+    spriteID: 9decbd61125f7ed43b03ee9844f7a208
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 700}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -448292952
+    name: CatSpeedNoHands
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: CatSpeedNoHands_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 360
+      spriteId: c9cff9cc11001454b97a81bcaa23ce07
+    - name: CatSpeedNoHands_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 340
+      spriteId: a1b3d0fc4a0027248a6c8ae06c3d25d8
+    - name: CatSpeedNoHands_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 360
+      spriteId: 27526a87ef65122468f2ac2780a9ca35
+    - name: CatSpeedNoHands_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 340
+      spriteId: f6cfc5b98c2db6e47b5c547d1b1f74a0
+    - name: CatSpeedNoHands_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 100
+        y: 0
+        width: 150
+        height: 360
+      spriteId: bf938cc37a6ceeb41a5fc2fbc412dca9
+    - name: CatSpeedNoHands_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 100
+        y: 0
+        width: 160
+        height: 340
+      spriteId: 7a997588ed684b34ab2618be3374eedf
+    - name: CatSpeedNoHands_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 100
+        y: 0
+        width: 160
+        height: 360
+      spriteId: 7aa40345b21c4b54b9b3b200ead3a017
+    - name: CatSpeedNoHands_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 100
+        y: 0
+        width: 160
+        height: 340
+      spriteId: bd0ad090e9fb5864a96418e469f0e747
+    - name: CatSpeedNoHands_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 100
+        y: 0
+        width: 150
+        height: 360
+      spriteId: e774498d46bdb2f44b4e29988031df54
+    - name: CatSpeedNoHands_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 90
+        y: 0
+        width: 160
+        height: 340
+      spriteId: fbc8b12c833f0a0409243cf9929ec872
+    - name: CatSpeedNoHands_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 90
+        y: 0
+        width: 160
+        height: 360
+      spriteId: 063290ef54891684bafd73adf599e9a3
+    - name: CatSpeedNoHands_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 90
+        y: 0
+        width: 160
+        height: 340
+      spriteId: 1b14b0074faeaa048a89efd81c6c10c2
+    - name: CatSpeedNoHands_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 360
+      spriteId: 323459afc9f66814da0601414f1e8321
+    - name: CatSpeedNoHands_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 340
+      spriteId: d931a64e7e994d943a0e37b59c5a136a
+    - name: CatSpeedNoHands_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 360
+      spriteId: ab7785c07ed1d3c478adb6814f462577
+    - name: CatSpeedNoHands_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 90
+        y: 0
+        width: 170
+        height: 340
+      spriteId: 9decbd61125f7ed43b03ee9844f7a208
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 350, y: 420}

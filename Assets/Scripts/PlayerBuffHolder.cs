@@ -22,7 +22,12 @@ public class PlayerBuffHolder : MonoBehaviour
     [Header("KnockBack")]
     public GameObject StrongCat;
     public Animator StrongCatAnimator;
-
+    [Header("Speed")]
+    public GameObject SpeedCat;
+    public Animator SpeedCatAnimator;
+    [Header("Fat")]
+    public GameObject FatCat;
+    public Animator FatCatAnimator;
     public enum BuffName
     {
         None,
@@ -72,12 +77,17 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.speedBuff = speedBuff.speed;
                 playerController.attackSpeedBuff = speedBuff.attackSpeed;
                 duration = speedBuff.duration;
+
+                playerController.anim = SpeedCatAnimator;
+                normalCat.SetActive(false);
+                SpeedCat.SetActive(true);
                 break;
             case BuffName.Knockback:
                 curretBuff = BuffName.Knockback;
                 playerController.knockbackBuff = knockbackBuff.forceAttack;
                 playerController.knockbackProtectionBuff = knockbackBuff.knockbackProtection;
                 duration = knockbackBuff.duration;
+
                 playerController.anim = StrongCatAnimator;
                 normalCat.SetActive(false);
                 StrongCat.SetActive(true);
@@ -90,6 +100,10 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.knockbackProtectionBuff = giantBuff.knockbackProtection;
                 playerController.isAOE_Attack = true;
                 duration = giantBuff.duration;
+
+                playerController.anim = FatCatAnimator;
+                normalCat.SetActive(false);
+                FatCat.SetActive(true);
                 break;
             case BuffName.God:
                 curretBuff = BuffName.God;
@@ -113,6 +127,8 @@ public class PlayerBuffHolder : MonoBehaviour
         playerController.isAOE_Attack = false;
         playerController.anim = normalCatAnimator;
         StrongCat.SetActive(false);
+        SpeedCat.SetActive(false);
+        FatCat.SetActive(false);
         normalCat.SetActive(true);
     }
 }
