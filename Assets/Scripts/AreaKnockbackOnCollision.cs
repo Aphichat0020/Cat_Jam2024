@@ -78,8 +78,7 @@ public class AreaKnockbackOnCollision : MonoBehaviour
                     print(collision.gameObject.name);
                     if (rb.tag != "Player")
                     {
-                     
-                     
+
                       // StartCoroutine(ResetVelocity(rb));
                     }
                     rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);

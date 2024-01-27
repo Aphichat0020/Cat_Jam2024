@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using System;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -25,16 +25,29 @@ public class AudioManager : MonoBehaviour
 
     // Start is called before the first frame update
 
-
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+      
+    }
 
     public void Start()
     {
-        //BGM_1();
+        BGM_1();
     }
     public void BGM_1()
     {
         AudioClip clip = ClickClips[0];
-        ClickSource.PlayOneShot(clip);
+        ClickSource.Play();
     }
 
     public void LoadVolum()//Volum saved in VolumSetting.cs

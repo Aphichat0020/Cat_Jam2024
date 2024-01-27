@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 StartCoroutine(WaitCooldownAttack());
+                AudioManager_New.instance.PlaySFX("Hit");
             }
         }
     }
