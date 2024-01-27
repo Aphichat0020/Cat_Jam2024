@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     public float damageBuff = 1;
 
     public bool isDead;
+    public bool isEnemy;
     // Start is called before the first frame update
     void Start()
     {

@@ -15,12 +15,6 @@ public class TestAI : MonoBehaviour
     public float RangAI_RandomWalkDistance;
     Vector3 pointToMove;
 
-
-
-
-
-
-
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();   
