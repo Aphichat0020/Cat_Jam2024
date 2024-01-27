@@ -4,19 +4,53 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : PlayerController
+public class EnemyAI : MonoBehaviour
 {
     [Header("Other")]
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
     public List<GameObject> ListTarget;
     public GameObject player;
-    public GameObject NearestOBJNearestOBJ;
+    public GameObject NearestOBJ;
     float distance;
     float nearestDistance = 10000;
     public Vector3 normalizedMovement;
     public float stopDistance;
 
+    public Color EnemyrColor;
+    public List<SpriteRenderer> enemyHands;
 
+    [Header("EnemyStat")]
+    public float EnemyHP;
+    public float EnemyDamage;
+    public float moveSpeed;
+    public Animator anim;
+
+    [Header("Attack")]
+    public Transform pivotHitBox;
+    public bool isAOE_Attack;
+    public GameObject Hitbox;
+    public bool CanAttack;
+    public float attackDelay;
+    float attackDelayTimer;
+    public float baseKnockbackStrength;
+    public float baseKnockbackRadius_AOE;
+    public bool gethit;
+    public GameObject attackEffectOBJ;
+
+    [Header("TotalBuffValue")]
+    public float totalKnockbackStrength;
+    public float totalKnockbackRadius_AOE;
+
+    [Header("BuffValue")]
+    public float speedBuff = 1;
+    public float knockbackBuff = 1;
+    public float KnockbackRadiusBuff = 1;
+    public float attackSpeedBuff = 1;
+    public float knockbackProtectionBuff = 1;
+    public float damageBuff = 1;
+
+    public bool isDead;
+    public bool Knockback;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -34,43 +68,130 @@ public class EnemyAI : PlayerController
         // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < enemyHands.Count; i++)
+        {
+            enemyHands[i].color = EnemyrColor;
+        }
         agent.updateRotation = false;
+        attackDelayTimer = attackDelay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        normalizedMovement = agent.desiredVelocity.normalized;
+        totalKnockbackRadius_AOE = baseKnockbackRadius_AOE * KnockbackRadiusBuff;
+        totalKnockbackStrength = baseKnockbackStrength * knockbackBuff;
 
-        GameObject nearestObject = ListTarget[0];
-        float distanceToNearest = Vector3.Distance(gameObject.transform.position, nearestObject.transform.position);
-    
-        for (int i = 0;i < ListTarget.Count;i++)
+        if (attackDelayTimer > 0)
         {
-            float distanceToCurrent = Vector3.Distance(gameObject.transform.position, ListTarget[i].transform.position);
-        
-            if(distanceToCurrent < distanceToNearest)
-            {
-                nearestObject = ListTarget[i];
-                distanceToNearest = distanceToCurrent;
-                
-            }
-        }
-        NearestOBJNearestOBJ = nearestObject;
-
-        float distanceTarget = Vector3.Distance(transform.position, NearestOBJNearestOBJ.transform.position);
-        if (distanceTarget <= stopDistance)
-        {
-            agent.isStopped = true;
+            attackDelayTimer -= Time.deltaTime * attackSpeedBuff;
         }
         else
         {
-            agent.isStopped = false;
+            CanAttack = true;
         }
-        agent.SetDestination(NearestOBJNearestOBJ.transform.position);
 
+        if (!isDead)
+        {
+            if (agent)
+            {
+                normalizedMovement = agent.desiredVelocity.normalized;
+            }
+
+
+            GameObject nearestObject = ListTarget[0];
+            float distanceToNearest = Vector3.Distance(gameObject.transform.position, nearestObject.transform.position);
+
+            for (int i = 0; i < ListTarget.Count; i++)
+            {
+                float distanceToCurrent = Vector3.Distance(gameObject.transform.position, ListTarget[i].transform.position);
+
+                if (distanceToCurrent < distanceToNearest)
+                {
+                    nearestObject = ListTarget[i];
+                    distanceToNearest = distanceToCurrent;
+
+                }
+            }
+            NearestOBJ = nearestObject;
+
+            float distanceTarget = Vector3.Distance(transform.position, NearestOBJ.transform.position);
+            if (distanceTarget <= stopDistance)
+            {
+   
+                agent.isStopped = true;
+                
+                EnemyAttack();
+            }
+            else
+            {
+                
+                agent.isStopped = false;
+                
+            }
+
+            if (!gethit)
+            {
+                agent.SetDestination(NearestOBJ.transform.position);
+
+            }
+        }
         anim.SetFloat("Horizontal", normalizedMovement.x);
         anim.SetFloat("Vertical", normalizedMovement.z);
         anim.SetFloat("Speed", normalizedMovement.sqrMagnitude);
+        //pivotHitBox.transform.rotation = Quaternion.LookRotation(normalizedMovement);
+
+        pivotHitBox.transform.LookAt(new Vector3(pivotHitBox.transform.position.x, NearestOBJ.transform.position.y, pivotHitBox.transform.position.z));
+        pivotHitBox.transform.LookAt(NearestOBJ.transform);
+        /*if (normalizedMovement.x >= 0.1f)
+        {
+            pivotHitBox.transform.eulerAngles = new Vector3(0, -90, 0);
+        }
+        else if (normalizedMovement.x <= -0.1f)
+        {
+            pivotHitBox.transform.eulerAngles = new Vector3(0, 90, 0);
+        }
+        else if (normalizedMovement.z >= 0.1f)
+        {
+            pivotHitBox.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (normalizedMovement.z <= -0.1f)
+        {
+            pivotHitBox.transform.eulerAngles = new Vector3(0, 0, 0);
+        }*/
+    }
+    public void EnemyAttack()
+    {
+        if (CanAttack == true)
+        {
+
+            StartCoroutine(WaitCooldownAttack());
+
+            //AudioManager_New.instance.PlaySFX("Hit");
+            
+        }
+    }
+    IEnumerator WaitCooldownAttack()
+    {
+        attackDelayTimer = attackDelay;
+        CanAttack = false;
+        GameObject effect = Instantiate(attackEffectOBJ, Hitbox.transform.position, Hitbox.transform.rotation
+            );
+        Destroy(effect, 0.5f);    
+        Hitbox.SetActive(true);
+        //HitboxEffect.SetActive(true);
+        yield return new WaitForSeconds(0.02f);
+        Hitbox.SetActive(false);
+        yield return new WaitForSeconds(0.15f);
+        //HitboxEffect.SetActive(false);
+    }
+
+    public IEnumerator GetHit()
+    {
+        gethit = true;
+        agent.enabled = false;
+        yield return new WaitForSeconds(1);
+        agent.enabled = true;
+        gethit = false;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AreaKnockbackOnCollision : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class AreaKnockbackOnCollision : MonoBehaviour
     public GameObject player;
     private float KnockbackStrength;
     private float KnockbackRadius;
-
+    NavMeshAgent agent;
+    
     public void Start()
     {
         playerController= gameObject.GetComponentInParent<PlayerController>();
@@ -78,11 +80,12 @@ public class AreaKnockbackOnCollision : MonoBehaviour
                     print(collision.gameObject.name);
                     if (rb.tag != "Player")
                     {
-
-                      // StartCoroutine(ResetVelocity(rb));
+                        collision.gameObject.GetComponent<NavMeshAgent>().velocity = playerController.InputKey * KnockbackStrength * 0.4f;
+                        print(collision.gameObject.GetComponent<NavMeshAgent>().velocity);
+                        //StartCoroutine(collision.gameObject.GetComponent<EnemyAI>().GetHit());
                     }
                     rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
-                    print(rb.name);
+
                 }
             }
         }
@@ -93,4 +96,6 @@ public class AreaKnockbackOnCollision : MonoBehaviour
         yield return new WaitForSeconds(1);
         rb.velocity = Vector3.zero;
     }
+
+    
 }
