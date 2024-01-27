@@ -59,11 +59,16 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         EnemyHP = MaxHP;
-        player2 = GameObject.FindGameObjectWithTag("Player2");
+
+            
         player = GameObject.FindGameObjectWithTag("Player");
+      //  player2 = GameObject.FindGameObjectWithTag("Player2");
+ 
         agent = GetComponent<NavMeshAgent>();
         ListTarget.Add(player);
-        ListTarget.Add(player2);
+       // ListTarget.Add(player2);
+       
+       
         foreach (GameObject target in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             if (target != gameObject)
@@ -110,6 +115,7 @@ public class EnemyAI : MonoBehaviour
 
 
             GameObject nearestObject = ListTarget[0];
+
             float distanceToNearest = Vector3.Distance(gameObject.transform.position, nearestObject.transform.position);
 
             for (int i = 0; i < ListTarget.Count; i++)
@@ -123,6 +129,7 @@ public class EnemyAI : MonoBehaviour
 
                 }
             }
+            
             NearestOBJ = nearestObject;
 
             float distanceTarget = Vector3.Distance(transform.position, NearestOBJ.transform.position);

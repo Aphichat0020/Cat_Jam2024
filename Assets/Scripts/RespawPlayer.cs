@@ -12,6 +12,8 @@ public class RespawPlayer : MonoBehaviour
     public float _Cooldown;
     public GameObject UI_Respaw;
     public TextMeshProUGUI Cooldown_Text;
+    public GameObject UI_RespawIsSolo;
+    public TextMeshProUGUI Cooldown_Text_isSolo;
     public bool isDaed = false;
     public PlayerBuffHolder playerBuffHolder;
     Rigidbody rb;
@@ -29,13 +31,22 @@ public class RespawPlayer : MonoBehaviour
         if (isDaed)
         {
              _Cooldown -=  Time.deltaTime;
-              Cooldown_Text.text =Mathf.Round(_Cooldown).ToString();    
+            Cooldown_Text.text =Mathf.Round(_Cooldown).ToString();
+             Cooldown_Text_isSolo.text = Mathf.Round(_Cooldown).ToString();
             if (_Cooldown <= 0)
             {
                 _Cooldown = 0;
                 
                 spaw_Player();
-                UI_Respaw.SetActive(false);
+                if(ModeManager.instance.is_Solo == true)
+                {
+                    UI_RespawIsSolo.SetActive(false);
+                }
+                if (ModeManager.instance.is_Online == true)
+                {
+                    UI_Respaw.SetActive(false);
+                }
+               
             }
         }
        
@@ -48,7 +59,14 @@ public class RespawPlayer : MonoBehaviour
         playerBuffHolder = MyLocation.GetComponent<PlayerBuffHolder>();
         rb = MyLocation.GetComponent<Rigidbody>();
 
-        UI_Respaw.SetActive(true);
+        if (ModeManager.instance.is_Solo == true)
+        {
+            UI_RespawIsSolo.SetActive(true);
+        }
+        if (ModeManager.instance.is_Online == true)
+        {
+            UI_Respaw.SetActive(true);
+        }
         isDaed = true;
 
         playerController.isDead = true;
