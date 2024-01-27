@@ -53,6 +53,7 @@ public class CameraFollows : MonoBehaviour
             camTransform.localPosition = originalPos;
         }
     }
+    
 
 
 }

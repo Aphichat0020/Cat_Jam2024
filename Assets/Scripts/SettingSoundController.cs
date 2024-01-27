@@ -34,10 +34,12 @@ public class SettingSoundController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && SettingUI.activeInHierarchy == false)
         {
             SettingUI.SetActive(true);
+            AudioManager_New.instance.PlaySFX("Click1");
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && SettingUI.activeInHierarchy == true)
         {
            SettingUI.SetActive(false);
+            AudioManager_New.instance.PlaySFX("Click1");
         }
     }
 
