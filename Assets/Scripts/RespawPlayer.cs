@@ -12,13 +12,15 @@ public class RespawPlayer : MonoBehaviour
     public GameObject UI_Respaw;
     public TextMeshProUGUI Cooldown_Text;
     public bool isDaed = false;
-   
+    public PlayerBuffHolder playerBuffHolder;
+
     public Transform[] spawPoints;
     public Transform MyLocation;
 
     Rigidbody rb;
     public void Start()
     {
+        playerBuffHolder = GetComponent<PlayerBuffHolder>();
         playerController = GetComponentInParent<PlayerController>();
         rb = GetComponent<Rigidbody>(); 
     }
@@ -47,6 +49,7 @@ public class RespawPlayer : MonoBehaviour
         rb.isKinematic = true;
         rb.velocity = Vector3.zero;
         rb.useGravity = false;
+        playerController.isDead = true;
 
         _Cooldown = Max_Cooldown;
     }
@@ -62,6 +65,8 @@ public class RespawPlayer : MonoBehaviour
    
     public void spaw_Player()
     {
+        playerBuffHolder.PlayerBuffReset();
+        playerController.isDead = false;
         rb.velocity = Vector3.zero;
         rb.useGravity = true;
         rb.isKinematic = false;

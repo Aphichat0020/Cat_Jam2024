@@ -73,6 +73,7 @@ public class PlayerBuffHolder : MonoBehaviour
                 break;
 
             case BuffName.Speed:
+                PlayerBuffReset();
                 curretBuff = BuffName.Speed;
                 playerController.speedBuff = speedBuff.speed;
                 playerController.attackSpeedBuff = speedBuff.attackSpeed;
@@ -81,8 +82,10 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.anim = SpeedCatAnimator;
                 normalCat.SetActive(false);
                 SpeedCat.SetActive(true);
+
                 break;
             case BuffName.Knockback:
+                PlayerBuffReset();
                 curretBuff = BuffName.Knockback;
                 playerController.knockbackBuff = knockbackBuff.forceAttack;
                 playerController.knockbackProtectionBuff = knockbackBuff.knockbackProtection;
@@ -92,7 +95,9 @@ public class PlayerBuffHolder : MonoBehaviour
                 normalCat.SetActive(false);
                 StrongCat.SetActive(true);
                 break;
+
             case BuffName.Giant:
+                PlayerBuffReset();
                 curretBuff = BuffName.Giant;
                 playerController.speedBuff = giantBuff.speed;
                 playerController.attackSpeedBuff = giantBuff.attackSpeed;
@@ -104,8 +109,10 @@ public class PlayerBuffHolder : MonoBehaviour
                 playerController.anim = FatCatAnimator;
                 normalCat.SetActive(false);
                 FatCat.SetActive(true);
+
                 break;
             case BuffName.God:
+                PlayerBuffReset();
                 curretBuff = BuffName.God;
                 playerController.speedBuff = godBuff.speed;
                 playerController.attackSpeedBuff = godBuff.attackSpeed;
