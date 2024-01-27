@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraFollows : MonoBehaviour
 {
+    public string TagPlayer;
     public Transform player;
 
     public Transform camTransform;
@@ -27,7 +28,7 @@ public class CameraFollows : MonoBehaviour
    
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag(TagPlayer).transform;
     }
     void OnEnable()
     {
