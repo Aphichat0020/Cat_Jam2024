@@ -12,4 +12,5 @@ public class SpeedBuff : ScriptableObject
     public float speed;
     public float attackSpeed;
     public float knockbackProtection;
+    public float attackDamage;
 }

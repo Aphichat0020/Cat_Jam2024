@@ -17,3 +17,4 @@ MonoBehaviour:
   duration: 20
   forceAttack: 3
   knockbackProtection: 4
+  attackDamage: 20

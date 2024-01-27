@@ -1,11 +1,13 @@
  using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class RespawAI : MonoBehaviour
 {
+    EnemyAI enemyAI;
     // PlayerController AIController;
     public float _Cooldown;
     public float Max_Cooldown;
@@ -19,6 +21,8 @@ public class RespawAI : MonoBehaviour
     Rigidbody rb;
     public void Start()
     {
+        _Cooldown = Max_Cooldown;
+        enemyAI = GetComponentInParent<EnemyAI>();
         //playerController = GetComponentInParent<PlayerController>();
         rb = GetComponent<Rigidbody>();
     }
@@ -58,8 +62,9 @@ public class RespawAI : MonoBehaviour
 
     public void spaw_AI()
     {
-       
-        MyLocation.transform.position = spawPoints[Random.Range(0, spawPoints.Length)].transform.position;
+        enemyAI.EnemyHP = enemyAI.MaxHP;
+        enemyAI.isDead = false;
+        gameObject.transform.position = spawPoints[Random.Range(0, spawPoints.Length)].transform.position;
         isDaed = false;
     }
 }

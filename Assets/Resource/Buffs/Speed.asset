@@ -18,3 +18,4 @@ MonoBehaviour:
   speed: 2
   attackSpeed: 2
   knockbackProtection: 2
+  attackDamage: 2

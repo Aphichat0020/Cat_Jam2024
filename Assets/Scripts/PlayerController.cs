@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool isPlayer2;
     public Color PlayerColor;
     public List<SpriteRenderer> playerHands;
     public Camera playerCamera;
+    public RespawPlayer playerRespaw;
 
     [Header("PlayerStat")]
+    public float MaxHP;
     public float playerHP;
     public float playerDamage;
     public float moveSpeed;
@@ -31,6 +34,7 @@ public class PlayerController : MonoBehaviour
     [Header("TotalBuffValue")]
     public float totalKnockbackStrength;
     public float totalKnockbackRadius_AOE;
+    public float totalPlayerDamage;
 
     [Header("BuffValue")]
     public float speedBuff = 1;
@@ -44,6 +48,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerHP = MaxHP;
+
         for (int i = 0;i < playerHands.Count; i++)
         {
             playerHands[i].color = PlayerColor;
@@ -63,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            pivotHitBox.transform.LookAt(new Vector3(hit.point.x, pivotHitBox.transform.position.y, hit.point.z));
+            //pivotHitBox.transform.LookAt(new Vector3(hit.point.x, pivotHitBox.transform.position.y, hit.point.z));
             //pivotHitBox.transform.LookAt(hit.point);
 
             // Do something with the object that was hit by the raycast.
@@ -71,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
         totalKnockbackRadius_AOE = baseKnockbackRadius_AOE * KnockbackRadiusBuff;
         totalKnockbackStrength = baseKnockbackStrength * knockbackBuff;
+        totalPlayerDamage = playerDamage + damageBuff;
 
         if (attackDelayTimer > 0)
         {
@@ -81,41 +88,50 @@ public class PlayerController : MonoBehaviour
             CanAttack = true;
         }
 
-        if (!isDead)
+        if (!isPlayer2)
         {
-            ClickMouseAttack();
-            InputKey = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+            if (!isDead)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    ClickMouseAttack();
+                }
+                InputKey = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+            }
+
+            anim.SetFloat("Horizontal", InputKey.x);
+            anim.SetFloat("Vertical", InputKey.z);
+            anim.SetFloat("Speed", InputKey.sqrMagnitude);
+
+            pivotHitBox.transform.eulerAngles = InputKey;
+            pivotHitBox.transform.rotation = Quaternion.LookRotation(InputKey);
         }
+        else
+        {
+            if (!isDead)
+            {
+                if (Input.GetKeyDown(KeyCode.Keypad0))
+                {
+                    ClickMouseAttack();
+                }
+                InputKey = new Vector3(Input.GetAxis("Horizontal2"), 0, Input.GetAxis("Vertical2")).normalized;
+            }
+            anim.SetFloat("Horizontal", InputKey.x);
+            anim.SetFloat("Vertical", InputKey.z);
+            anim.SetFloat("Speed", InputKey.sqrMagnitude);
 
-        anim.SetFloat("Horizontal", InputKey.x);
-        anim.SetFloat("Vertical", InputKey.z);
-        anim.SetFloat("Speed", InputKey.sqrMagnitude);
-
-        //pivotHitBox.transform.eulerAngles = InputKey;
-        //pivotHitBox.transform.rotation = Quaternion.LookRotation(-InputKey);
+            pivotHitBox.transform.eulerAngles = InputKey;
+            pivotHitBox.transform.rotation = Quaternion.LookRotation(InputKey);
+        }
         
-        /*if (InputKey.x >= 0.1f)
+        if(playerHP <= 0)
         {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, -90, 0);
-            //rb.AddForce(transform.forward * moveSpeed * speedBuff);
+            if (!isDead)
+            {
+                playerRespaw.PlayerDead(gameObject);
+                isDead = true;
+            }
         }
-        else if(InputKey.x <= -0.1f)
-        {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, 90, 0);
-        }
-        else if(InputKey.z >= 0.1f)
-        {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else if (InputKey.z <= -0.1f)
-        {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-
-        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
-        {
-            InputKey = Vector3.zero;
-        }*/
     }
 
     private void FixedUpdate()
@@ -129,11 +145,10 @@ public class PlayerController : MonoBehaviour
     {
         if (CanAttack == true)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
+            
                 StartCoroutine(WaitCooldownAttack());
                 //AudioManager_New.instance.PlaySFX("Hit");
-            }
+            
         }
     }
     IEnumerator WaitCooldownAttack()
@@ -147,5 +162,11 @@ public class PlayerController : MonoBehaviour
         Hitbox.SetActive(false);
         yield return new WaitForSeconds(0.13f);
         //HitboxEffect.SetActive(false);
+    }
+
+    public void GetHit(float damage)
+    {
+        playerHP -= damage;
+        Debug.Log(gameObject.name + " : " + playerHP);
     }
 }

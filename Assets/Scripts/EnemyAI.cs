@@ -6,10 +6,13 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    RespawAI RespawAI;
+
     [Header("Other")]
     public NavMeshAgent agent;
     public List<GameObject> ListTarget;
     public GameObject player;
+    public GameObject player2;
     public GameObject NearestOBJ;
     float distance;
     float nearestDistance = 10000;
@@ -20,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     public List<SpriteRenderer> enemyHands;
 
     [Header("EnemyStat")]
+    public float MaxHP;
     public float EnemyHP;
     public float EnemyDamage;
     public float moveSpeed;
@@ -40,6 +44,7 @@ public class EnemyAI : MonoBehaviour
     [Header("TotalBuffValue")]
     public float totalKnockbackStrength;
     public float totalKnockbackRadius_AOE;
+    public float totalEnemyDamage;
 
     [Header("BuffValue")]
     public float speedBuff = 1;
@@ -53,9 +58,12 @@ public class EnemyAI : MonoBehaviour
     public bool Knockback;
     private void Awake()
     {
+        EnemyHP = MaxHP;
+        player2 = GameObject.FindGameObjectWithTag("Player2");
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         ListTarget.Add(player);
+        ListTarget.Add(player2);
         foreach (GameObject target in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             if (target != gameObject)
@@ -68,6 +76,7 @@ public class EnemyAI : MonoBehaviour
         // Start is called before the first frame update
     void Start()
     {
+        RespawAI = gameObject.GetComponent<RespawAI>();
         for (int i = 0; i < enemyHands.Count; i++)
         {
             enemyHands[i].color = EnemyrColor;
@@ -81,6 +90,7 @@ public class EnemyAI : MonoBehaviour
     {
         totalKnockbackRadius_AOE = baseKnockbackRadius_AOE * KnockbackRadiusBuff;
         totalKnockbackStrength = baseKnockbackStrength * knockbackBuff;
+        totalEnemyDamage = EnemyDamage + damageBuff;
 
         if (attackDelayTimer > 0)
         {
@@ -143,22 +153,15 @@ public class EnemyAI : MonoBehaviour
 
         pivotHitBox.transform.LookAt(new Vector3(pivotHitBox.transform.position.x, NearestOBJ.transform.position.y, pivotHitBox.transform.position.z));
         pivotHitBox.transform.LookAt(NearestOBJ.transform);
-        /*if (normalizedMovement.x >= 0.1f)
+
+        if (EnemyHP <= 0)
         {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, -90, 0);
+            if (!isDead)
+            {
+                RespawAI.AIDead();
+                isDead = true;
+            }
         }
-        else if (normalizedMovement.x <= -0.1f)
-        {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, 90, 0);
-        }
-        else if (normalizedMovement.z >= 0.1f)
-        {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else if (normalizedMovement.z <= -0.1f)
-        {
-            pivotHitBox.transform.eulerAngles = new Vector3(0, 0, 0);
-        }*/
     }
     public void EnemyAttack()
     {
@@ -193,5 +196,10 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(1);
         agent.enabled = true;
         gethit = false;
+    }
+
+    public void GetHit(float damage)
+    {
+        EnemyHP -= damage;
     }
 }

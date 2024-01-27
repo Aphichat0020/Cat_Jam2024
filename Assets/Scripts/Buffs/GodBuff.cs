@@ -14,5 +14,5 @@ public class GodBuff : ScriptableObject
     public float shield;
     public float forceAttack;
     public float knockbackProtection;
-    
+    public float attackDamage;
 }

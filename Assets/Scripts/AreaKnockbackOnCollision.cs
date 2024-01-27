@@ -5,10 +5,12 @@ using UnityEngine.AI;
 
 public class AreaKnockbackOnCollision : MonoBehaviour
 {
+    public string enemyTag;
     public PlayerController playerController;
     public GameObject player;
     private float KnockbackStrength;
     private float KnockbackRadius;
+    private float playerDamage;
     NavMeshAgent agent;
     
     public void Start()
@@ -21,6 +23,7 @@ public class AreaKnockbackOnCollision : MonoBehaviour
         {
             KnockbackStrength = playerController.totalKnockbackStrength;
             KnockbackRadius = playerController.totalKnockbackRadius_AOE;
+            playerDamage = playerController.totalPlayerDamage;
         }
         else
         {
@@ -69,7 +72,8 @@ public class AreaKnockbackOnCollision : MonoBehaviour
         }
         else
         {
-            if (collision.gameObject.tag == "Enemy")
+
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag ==  enemyTag)
             {
 
                 Rigidbody rb = collision.GetComponent<Rigidbody>();
@@ -78,13 +82,26 @@ public class AreaKnockbackOnCollision : MonoBehaviour
                 {
 
                     print(collision.gameObject.name);
-                    if (rb.tag != "Player")
+                    if (rb.tag == enemyTag || rb.tag == "Enemy")
                     {
-                        collision.gameObject.GetComponent<NavMeshAgent>().velocity = playerController.InputKey * KnockbackStrength * 0.4f;
-                        print(collision.gameObject.GetComponent<NavMeshAgent>().velocity);
-                        //StartCoroutine(collision.gameObject.GetComponent<EnemyAI>().GetHit());
+                        if (rb.tag == "Enemy")
+                        {
+                            collision.gameObject.GetComponent<NavMeshAgent>().velocity = playerController.InputKey * KnockbackStrength * 0.4f;
+                            print(collision.gameObject.GetComponent<NavMeshAgent>().velocity);
+                            //StartCoroutine(collision.gameObject.GetComponent<EnemyAI>().GetHit());
+                            
+                            collision.gameObject.GetComponent<EnemyAI>().GetHit(playerDamage);
+                            
+                        }
+
+                        rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                        print(collision.gameObject.GetComponent<Rigidbody>().velocity);
+
+                        if(rb.tag == enemyTag)
+                        {
+                            collision.gameObject.GetComponent<PlayerController>().GetHit(playerDamage);
+                        }
                     }
-                    rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
 
                 }
             }

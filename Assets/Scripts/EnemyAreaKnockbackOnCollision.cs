@@ -9,6 +9,7 @@ public class EnemyAreaKnockbackOnCollision : MonoBehaviour
     public GameObject enemy;
     private float KnockbackStrength;
     private float KnockbackRadius;
+    private float enemyDamage;
 
     public void Start()
     {
@@ -20,6 +21,7 @@ public class EnemyAreaKnockbackOnCollision : MonoBehaviour
         {
             KnockbackStrength = enemyController.totalKnockbackStrength;
             KnockbackRadius = enemyController.totalKnockbackRadius_AOE;
+            enemyDamage = enemyController.totalEnemyDamage;
         }
         else
         {
@@ -68,7 +70,7 @@ public class EnemyAreaKnockbackOnCollision : MonoBehaviour
         }
         else
         {
-            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")
             {
 
                 Rigidbody rb = collision.GetComponent<Rigidbody>();
@@ -76,11 +78,18 @@ public class EnemyAreaKnockbackOnCollision : MonoBehaviour
                 if (rb != null)
                 {
 
-                    
-                    if (rb.tag == "Player" || rb.tag == "Enemy")
-                    {
 
-                      // StartCoroutine(ResetVelocity(rb));
+                    if (rb.tag == "Player" || rb.tag == "Player2")
+                    {
+                        collision.gameObject.GetComponent<PlayerController>().GetHit(enemyDamage);
+                        // StartCoroutine(ResetVelocity(rb));
+                    }
+                    else if (rb.tag == "Enemy")
+                    {
+                        if (collision.gameObject.transform.root != gameObject.transform.root)
+                        {
+                            collision.gameObject.GetComponent<EnemyAI>().GetHit(enemyDamage);
+                        }
                     }
                     rb.AddExplosionForce(KnockbackStrength, enemy.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
                     print(collision.gameObject.GetComponent<Rigidbody>().velocity);
