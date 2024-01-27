@@ -28,23 +28,23 @@ public class SelecterManager : MonoBehaviour
     {
         Character.color = PlayerColor1;
     }
-    public void SelecterCharacter_Green()
+    public void SelecterCharacter_Orange()
     {
         Character.color = PlayerColor2;
     }
-    public void SelecterCharacter_Blue()
+    public void SelecterCharacter_Yellow()
     {
         Character.color = PlayerColor3;
     }
-    public void SelecterCharacter_Yellow()
+    public void SelecterCharacter_Green()
     {
         Character.color = PlayerColor4;
     }
-    public void SelecterCharacter_Pink()
+    public void SelecterCharacter_LightBlue()
     {
         Character.color = PlayerColor5;
     }
-    public void SelecterCharacter_Black()
+    public void SelecterCharacter_Blue()
     {
         Character.color = PlayerColor6;
     }
