@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class SelecterManager : MonoBehaviour
 {
+
+    public Color PlayerColor1;
+    public Color PlayerColor2;
+    public Color PlayerColor3;
+    public Color PlayerColor4;
+    public Color PlayerColor5;
+    public Color PlayerColor6;
     public Image Character;
 
     void Start()
     {
-        
+        Character.color = PlayerColor1;
     }
 
     // Update is called once per frame
@@ -19,27 +26,27 @@ public class SelecterManager : MonoBehaviour
     }
     public void SelecterCharacter_Red()
     {
-        Character.color = Color.red;
+        Character.color = PlayerColor1;
     }
     public void SelecterCharacter_Green()
     {
-        Character.color = Color.green;
+        Character.color = PlayerColor2;
     }
     public void SelecterCharacter_Blue()
     {
-        Character.color = Color.blue;
+        Character.color = PlayerColor3;
     }
     public void SelecterCharacter_Yellow()
     {
-        Character.color = Color.yellow;
+        Character.color = PlayerColor4;
     }
     public void SelecterCharacter_Pink()
     {
-        Character.color = Color.magenta;
+        Character.color = PlayerColor5;
     }
     public void SelecterCharacter_Black()
     {
-        Character.color = Color.black;
+        Character.color = PlayerColor6;
     }
 
 }

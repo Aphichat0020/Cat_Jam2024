@@ -37,6 +37,7 @@ public class AreaKnockbackOnCollision : MonoBehaviour
                 if (rb != null)
                 {
                     rb.AddExplosionForce(KnockbackStrength, transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                  //  StartCoroutine(ResetVelocity(rb));
                 }
 
             }
@@ -59,6 +60,7 @@ public class AreaKnockbackOnCollision : MonoBehaviour
                     {
                         print(rb.name);
                         rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                       // StartCoroutine(ResetVelocity(rb));
                     }
                 }
             }
@@ -76,11 +78,20 @@ public class AreaKnockbackOnCollision : MonoBehaviour
                     print(collision.gameObject.name);
                     if (rb.tag != "Player")
                     {
-                        print(rb.name);
-                        rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                     
+                     
+                      // StartCoroutine(ResetVelocity(rb));
                     }
+                    rb.AddExplosionForce(KnockbackStrength, player.transform.position, KnockbackRadius, 0f, ForceMode.Impulse);
+                    print(rb.name);
                 }
             }
         }
+    }
+  
+    IEnumerator ResetVelocity(Rigidbody rb)
+    {
+        yield return new WaitForSeconds(1);
+        rb.velocity = Vector3.zero;
     }
 }
