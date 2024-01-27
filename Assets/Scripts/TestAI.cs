@@ -15,12 +15,6 @@ public class TestAI : MonoBehaviour
     public float RangAI_RandomWalkDistance;
     Vector3 pointToMove;
 
-
-
-
-
-
-
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();   
@@ -33,23 +27,23 @@ public class TestAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceTarget = Vector3.Distance(transform.position, pointToMove);
+        //float distanceTarget = Vector3.Distance(transform.position, pointToMove);
 
-        if (distanceTarget <= 2)
-        {
-            agent.isStopped = true;
-            pointToMove = GetRandomPointOnNavMesh();
-        }
-        else
-        {
-           agent.SetDestination(pointToMove);
-            agent.isStopped = false;
-        }
+        //if (distanceTarget <= 2)
+        //{
+        //    agent.isStopped = true;
+        //    pointToMove = GetRandomPointOnNavMesh();
+        //}
+        //else
+        //{
+        //   agent.SetDestination(pointToMove);
+        //    agent.isStopped = false;
+        //}
 
 
         //////////////
 
-        //agent.SetDestination(MovePositionTransform.position);
+        agent.SetDestination(MovePositionTransform.position);
         BetweenAI = Vector3.Distance(transform.position, MovePositionTransform.position);
        
         if (Vector3.Distance(transform.position,MovePositionTransform.position) < RangAI_Attack)
@@ -68,8 +62,8 @@ public class TestAI : MonoBehaviour
     }
     Vector3 GetRandomPointOnNavMesh()
     {
-        NavMeshHit hit;
-        Vector3 randomPoint = UnityEngine.Random.insideUnitSphere * RangAI_RandomWalkDistance;
+       NavMeshHit hit;
+       Vector3 randomPoint = UnityEngine.Random.insideUnitSphere * RangAI_RandomWalkDistance;
 
         if (NavMesh.SamplePosition(randomPoint, out hit, RangAI_RandomWalkDistance, NavMesh.AllAreas))
         {
