@@ -76,4 +76,16 @@ public  class AudioManager_New : MonoBehaviour
     {
         SFXSource.volume = Volume;
     }
+
+
+
+
+    /////
+    ///
+    public void Click1()
+    {
+        AudioManager_New.instance.PlaySFX("Click1");
+
+    }
+   
 }
