@@ -2384,7 +2384,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.83, y: 1.0852119}
+  m_Size: {x: 0.75, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -36797,7 +36797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f826c7a9b2fb7946b4c3034796c8bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerColor: {r: 1, g: 0, b: 0, a: 1}
+  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
   playerHands: {fileID: 1495543973}
   playerHP: 100
   playerDamage: 0
@@ -40301,7 +40301,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.83, y: 1.0852119}
+  m_Size: {x: 1.65, y: 1.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -43876,7 +43876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MusicSlider: {fileID: 2091497264}
   _SFXSlider: {fileID: 944881175}
-  SettingUI: {fileID: 1466225482}
+  SettingUI: {fileID: 0}
 --- !u!114 &1123635267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58006,7 +58006,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.83, y: 1.0852119}
+  m_Size: {x: 0.75, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -62183,7 +62183,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.83, y: 1.0852119}
+  m_Size: {x: 0.95, y: 0.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
