@@ -46,9 +46,10 @@ public class AudioManager : MonoBehaviour
     }
     public void BGM_1()
     {
-        AudioClip clip = ClickClips[0];
+        AudioClip clip = BGMClips[0];
         ClickSource.Play();
     }
+    
 
     public void LoadVolum()//Volum saved in VolumSetting.cs
     {

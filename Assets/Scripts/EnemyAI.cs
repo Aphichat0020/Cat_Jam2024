@@ -279,7 +279,7 @@ public class EnemyAI : MonoBehaviour
 
             StartCoroutine(WaitCooldownAttack());
 
-            //AudioManager_New.instance.PlaySFX("Hit");
+            AudioManager_New.instance.PlaySFX("Hit");
             
         }
     }

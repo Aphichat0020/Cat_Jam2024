@@ -131,6 +131,7 @@ public class PlayerController : MonoBehaviour
             if (!isDead)
             {
                 playerRespaw.PlayerDead(gameObject);
+                AudioManager_New.instance.PlaySFX("Die");
                 isDead = true;
             }
         }
@@ -149,7 +150,8 @@ public class PlayerController : MonoBehaviour
         {
             
                 StartCoroutine(WaitCooldownAttack());
-                //AudioManager_New.instance.PlaySFX("Hit");
+
+                AudioManager_New.instance.PlaySFX("Hit");
             
         }
     }

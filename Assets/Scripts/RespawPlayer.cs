@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using static UnityEditor.FilePathAttribute;
 using Unity.VisualScripting;
 using Photon.Pun.Demo.PunBasics;
 
@@ -72,11 +71,12 @@ public class RespawPlayer : MonoBehaviour
 
         _Cooldown = Max_Cooldown;
 
-        if (playerController.playerLife > 0)
+        if (playerController.playerLife <= 0)
         {
             if (ModeManager.instance.is_Solo == true)
             {
                 UI_RespawIsSolo.SetActive(true);
+                AudioManager_New.instance.PlaySFX("Die");
             }
             if (ModeManager.instance.is_Online == true)
             {
@@ -90,6 +90,7 @@ public class RespawPlayer : MonoBehaviour
             if (playerController.isPlayer2)
             {
                 gameManager.P2LoseGameCoop();
+               
             }
             else if(!playerController.isPlayer2)
             {

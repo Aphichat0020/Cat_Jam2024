@@ -56,11 +56,14 @@ public class RespawAI : MonoBehaviour
         isDaed = true;
         if (enemyAI.enemyLife > 0)
         {
+            AudioManager_New.instance.PlaySFX("Die");
+            
             enemyAI.enemyLife -= 1;
         }
         else
         {
             gameObject.SetActive(false);
+            gameObject.transform.position = new Vector3(100, 1, 100);
             gameManager.enemySoloKilled += 1;
             enemyAI.islose = true;
         }

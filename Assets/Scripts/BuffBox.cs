@@ -22,6 +22,7 @@ public class BuffBox : MonoBehaviour
     public void GivePlayerBuff(PlayerBuffHolder.BuffName buff)
     {
         playerBuffHolder.PlayerGetBuff(buff);
+        AudioManager_New.instance.PlaySFX("GetBuff");
         spawnPoint.hasBox = false;
         Destroy(gameObject);
     }
@@ -29,6 +30,7 @@ public class BuffBox : MonoBehaviour
     public void GiveEnemyBuff(PlayerBuffHolder.BuffName _buff)
     {
         enemyBuffHolder.EnemyGetBuff(_buff);
+       // AudioManager_New.instance.PlaySFX("GetBuff");
         spawnPoint.hasBox = false;
         Destroy(gameObject);
     }
