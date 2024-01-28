@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public RespawPlayer playerRespaw;
 
     [Header("PlayerStat")]
+    public int playerLife;
     public float MaxHP;
     public float playerHP;
     public float playerDamage;
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
     public float damageBuff = 1;
 
     public bool isDead;
+    public bool islose;
     // Start is called before the first frame update
     void Start()
     {

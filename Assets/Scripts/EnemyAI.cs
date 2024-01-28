@@ -14,15 +14,23 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     public GameObject player2;
     public GameObject NearestOBJ;
+    public GameObject NearestBuff;
+    public EnemyBuffHolder enemyBuffHolder;
+    public bool hasBuff;
     float distance;
     float nearestDistance = 10000;
     public Vector3 normalizedMovement;
     public float stopDistance;
+    float buffDistance;
+
 
     public Color EnemyrColor;
     public List<SpriteRenderer> enemyHands;
+    public bool goToBuff;
+    public List<GameObject> allBuffBox;
 
     [Header("EnemyStat")]
+    public int enemyLife;
     public float MaxHP;
     public float EnemyHP;
     public float EnemyDamage;
@@ -56,6 +64,7 @@ public class EnemyAI : MonoBehaviour
 
     public bool isDead;
     public bool Knockback;
+    public bool islose;
     private void Awake()
     {
         EnemyHP = MaxHP;
@@ -66,7 +75,11 @@ public class EnemyAI : MonoBehaviour
  
         agent = GetComponent<NavMeshAgent>();
         ListTarget.Add(player);
-        ListTarget.Add(player2);
+
+        if (player2)
+        {
+            ListTarget.Add(player2);
+        }
        
        
         foreach (GameObject target in GameObject.FindGameObjectsWithTag("Enemy"))
@@ -93,6 +106,28 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!enemyBuffHolder)
+        {
+            enemyBuffHolder = gameObject.GetComponentInChildren<EnemyBuffHolder>();
+        }
+        else
+        {
+            if(enemyBuffHolder.curretBuff == PlayerBuffHolder.BuffName.None)
+            {
+                hasBuff = false;
+            }
+            else
+            {
+                hasBuff = true;
+            }
+        }
+
+        allBuffBox = new List<GameObject>();
+        foreach (GameObject buff in GameObject.FindGameObjectsWithTag("BuffBox"))
+        {
+            allBuffBox.Add(buff);
+        }
+
         totalKnockbackRadius_AOE = baseKnockbackRadius_AOE * KnockbackRadiusBuff;
         totalKnockbackStrength = baseKnockbackStrength * knockbackBuff;
         totalEnemyDamage = EnemyDamage + damageBuff;
@@ -113,7 +148,7 @@ public class EnemyAI : MonoBehaviour
                 normalizedMovement = agent.desiredVelocity.normalized;
             }
 
-
+            /////////Target///////////
             GameObject nearestObject = ListTarget[0];
 
             float distanceToNearest = Vector3.Distance(gameObject.transform.position, nearestObject.transform.position);
@@ -129,28 +164,95 @@ public class EnemyAI : MonoBehaviour
 
                 }
             }
-            
             NearestOBJ = nearestObject;
 
-            float distanceTarget = Vector3.Distance(transform.position, NearestOBJ.transform.position);
-            if (distanceTarget <= stopDistance)
+            /////////BUFF///////////
+            if (allBuffBox.Count > 0)
             {
-   
-                agent.isStopped = true;
-                
-                EnemyAttack();
+                GameObject nearestBuff = allBuffBox[0];
+
+                float distanceToNearestBuff = Vector3.Distance(gameObject.transform.position, nearestBuff.transform.position);
+
+                for (int i = 0; i < allBuffBox.Count; i++)
+                {
+                    float distanceToCurrent = Vector3.Distance(gameObject.transform.position, allBuffBox[i].transform.position);
+
+                    if (distanceToCurrent < distanceToNearest)
+                    {
+                        nearestBuff = allBuffBox[i];
+                        distanceToNearest = distanceToCurrent;
+
+                    }
+                }
+                NearestBuff = nearestBuff;
+
+
+
+                buffDistance = Vector3.Distance(transform.position, nearestBuff.transform.position);
+            }
+            float distanceTarget = Vector3.Distance(transform.position, NearestOBJ.transform.position);
+
+            if (allBuffBox.Count > 0)
+            {
+                if (buffDistance < distanceTarget)
+                {
+                    if (!hasBuff)
+                    {
+                        goToBuff = true;
+                    }
+                    else
+                    {
+                        goToBuff = false;
+                    }
+                }
+                else
+                {
+                    goToBuff = false;
+                }
+            }
+
+            if (!goToBuff) 
+            {
+                if (distanceTarget <= stopDistance)
+                {
+
+                    agent.isStopped = true;
+
+                    EnemyAttack();
+                }
+                else
+                {
+
+                    agent.isStopped = false;
+
+                }
+
+                if (!gethit)
+                {
+                    agent.SetDestination(NearestOBJ.transform.position);
+
+                }
             }
             else
             {
-                
-                agent.isStopped = false;
-                
-            }
+                if (distanceTarget <= 0)
+                {
 
-            if (!gethit)
-            {
-                agent.SetDestination(NearestOBJ.transform.position);
+                    agent.isStopped = true;
 
+                }
+                else
+                {
+
+                    agent.isStopped = false;
+
+                }
+
+                if (!gethit)
+                {
+                    agent.SetDestination(NearestBuff.transform.position);
+
+                }
             }
         }
         anim.SetFloat("Horizontal", normalizedMovement.x);

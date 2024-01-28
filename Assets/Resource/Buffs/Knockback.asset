@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Knockback
   buffName: 4
   duration: 20
-  forceAttack: 3
+  forceAttack: 2
   knockbackProtection: 4
   attackDamage: 20

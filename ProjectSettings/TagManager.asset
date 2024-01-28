@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Player1
   - Player2
+  - BuffBox
   layers:
   - Default
   - TransparentFX
