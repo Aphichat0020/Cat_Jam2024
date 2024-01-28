@@ -48,6 +48,7 @@ public class EnemyAI : MonoBehaviour
     public float baseKnockbackRadius_AOE;
     public bool gethit;
     public GameObject attackEffectOBJ;
+    public GameObject giantAttackEffectOBJ;
 
     [Header("TotalBuffValue")]
     public float totalKnockbackStrength;
@@ -279,17 +280,30 @@ public class EnemyAI : MonoBehaviour
 
             StartCoroutine(WaitCooldownAttack());
 
-            AudioManager_New.instance.PlaySFX("Hit");
-            
+            //AudioManager_New.instance.PlaySFX("Hit");
+            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
+
+
         }
     }
     IEnumerator WaitCooldownAttack()
     {
         attackDelayTimer = attackDelay;
         CanAttack = false;
-        GameObject effect = Instantiate(attackEffectOBJ, Hitbox.transform.position, Hitbox.transform.rotation
-            );
-        Destroy(effect, 0.5f);    
+
+        if(enemyBuffHolder.curretBuff == PlayerBuffHolder.BuffName.Giant)
+        {
+            GameObject effect = Instantiate(giantAttackEffectOBJ, gameObject.transform.position, gameObject.transform.rotation);
+            Destroy(effect, 0.5f);
+        }
+        else
+        {
+            GameObject effect = Instantiate(attackEffectOBJ, Hitbox.transform.position, Hitbox.transform.rotation);
+            Destroy(effect, 0.5f);
+        }
+
+        
         Hitbox.SetActive(true);
         //HitboxEffect.SetActive(true);
         yield return new WaitForSeconds(0.02f);

@@ -62,8 +62,6 @@ public class RespawPlayer : MonoBehaviour
         rb = MyLocation.GetComponent<Rigidbody>();
         MyLocation.gameObject.SetActive(false);
 
-        
-        
 
         isDaed = true;
 
@@ -71,7 +69,7 @@ public class RespawPlayer : MonoBehaviour
 
         _Cooldown = Max_Cooldown;
 
-        if (playerController.playerLife <= 0)
+        if (playerController.playerLife > 0)
         {
             if (ModeManager.instance.is_Solo == true)
             {

@@ -18,6 +18,6 @@ MonoBehaviour:
   speed: 0.8
   attackSpeed: 0.5
   shield: 500
-  forceAttack: 2
+  forceAttack: 1.5
   knockbackProtection: 3
-  attackDamage: 10
+  attackDamage: 15

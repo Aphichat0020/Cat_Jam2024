@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public List<SpriteRenderer> playerHands;
     public Camera playerCamera;
     public RespawPlayer playerRespaw;
+    public PlayerBuffHolder playerBuffHolder;
 
     [Header("PlayerStat")]
     public int playerLife;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public float baseKnockbackStrength;
     public float baseKnockbackRadius_AOE;
     public GameObject attackEffectOBJ;
+    public GameObject giantAttackEffectOBJ;
 
 
     [Header("TotalBuffValue")]
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerBuffHolder = gameObject.GetComponent<PlayerBuffHolder>();
         playerHP = MaxHP;
 
         for (int i = 0;i < playerHands.Count; i++)
@@ -159,7 +162,18 @@ public class PlayerController : MonoBehaviour
     {
         attackDelayTimer = attackDelay;
         CanAttack = false;
-        Instantiate(attackEffectOBJ, Hitbox.transform.position, Hitbox.transform.rotation);
+
+        if (playerBuffHolder.curretBuff == PlayerBuffHolder.BuffName.Giant)
+        {
+            GameObject effect = Instantiate(giantAttackEffectOBJ, gameObject.transform.position, gameObject.transform.rotation);
+            Destroy(effect, 0.5f);
+        }
+        else
+        {
+            GameObject effect = Instantiate(attackEffectOBJ, Hitbox.transform.position, Hitbox.transform.rotation);
+            Destroy(effect, 0.5f);
+        }
+
         Hitbox.SetActive(true);
         //HitboxEffect.SetActive(true);
         yield return new WaitForSeconds(0.02f);
