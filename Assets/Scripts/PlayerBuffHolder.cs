@@ -138,6 +138,7 @@ public class PlayerBuffHolder : MonoBehaviour
         playerController.knockbackProtectionBuff = 1;
         playerController.isAOE_Attack = false;
         playerController.anim = normalCatAnimator;
+        playerController.damageBuff = 1;
         StrongCat.SetActive(false);
         SpeedCat.SetActive(false);
         FatCat.SetActive(false);

@@ -86,8 +86,10 @@ public class EnemyAreaKnockbackOnCollision : MonoBehaviour
                     }
                     else if (rb.tag == "Enemy")
                     {
+                        print("Here1");
                         if (collision.gameObject.transform.root != gameObject.transform.root)
                         {
+                            print("Here2");
                             collision.gameObject.GetComponent<EnemyAI>().GetHit(enemyDamage);
                         }
                     }

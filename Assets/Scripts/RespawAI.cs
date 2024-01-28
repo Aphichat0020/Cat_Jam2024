@@ -8,6 +8,7 @@ using UnityEngine;
 public class RespawAI : MonoBehaviour
 {
     EnemyAI enemyAI;
+    GameManager gameManager;
     // PlayerController AIController;
     public float _Cooldown;
     public float Max_Cooldown;
@@ -21,6 +22,7 @@ public class RespawAI : MonoBehaviour
     Rigidbody rb;
     public void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _Cooldown = Max_Cooldown;
         enemyAI = GetComponentInParent<EnemyAI>();
         //playerController = GetComponentInParent<PlayerController>();
@@ -28,6 +30,11 @@ public class RespawAI : MonoBehaviour
     }
     public void Update()
     {
+        if (!gameManager)
+        {
+            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        }
+
         if (isDaed)
         {
             _Cooldown -= Time.deltaTime;
@@ -47,7 +54,16 @@ public class RespawAI : MonoBehaviour
     {
         // UI_Respaw.SetActive(true);
         isDaed = true;
-
+        if (enemyAI.enemyLife > 0)
+        {
+            enemyAI.enemyLife -= 1;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+            gameManager.enemySoloKilled += 1;
+            enemyAI.islose = true;
+        }
         _Cooldown = Max_Cooldown;
     }
 

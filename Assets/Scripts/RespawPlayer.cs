@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using static UnityEditor.FilePathAttribute;
+using Unity.VisualScripting;
+using Photon.Pun.Demo.PunBasics;
 
 public class RespawPlayer : MonoBehaviour
 {
@@ -17,12 +19,13 @@ public class RespawPlayer : MonoBehaviour
     public bool isDaed = false;
     public PlayerBuffHolder playerBuffHolder;
     Rigidbody rb;
-
+    GameManager gameManager;
     public Transform[] spawPoints;
     public Transform MyLocation;
 
     public void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();  
         playerBuffHolder = GetComponent<PlayerBuffHolder>();
         playerController = GetComponentInParent<PlayerController>();
     }
@@ -58,24 +61,47 @@ public class RespawPlayer : MonoBehaviour
         playerController = MyLocation.GetComponent<PlayerController>();
         playerBuffHolder = MyLocation.GetComponent<PlayerBuffHolder>();
         rb = MyLocation.GetComponent<Rigidbody>();
+        MyLocation.gameObject.SetActive(false);
 
-        if (ModeManager.instance.is_Solo == true)
-        {
-            UI_RespawIsSolo.SetActive(true);
-        }
-        if (ModeManager.instance.is_Online == true)
-        {
-            UI_Respaw.SetActive(true);
-        }
+        
+        
+
         isDaed = true;
 
         playerController.isDead = true;
 
         _Cooldown = Max_Cooldown;
+
+        if (playerController.playerLife > 0)
+        {
+            if (ModeManager.instance.is_Solo == true)
+            {
+                UI_RespawIsSolo.SetActive(true);
+            }
+            if (ModeManager.instance.is_Online == true)
+            {
+                UI_Respaw.SetActive(true);
+            }
+            playerController.playerLife -= 1;
+        }
+        else
+        {
+
+            if (playerController.isPlayer2)
+            {
+                gameManager.P2LoseGameCoop();
+            }
+            else if(!playerController.isPlayer2)
+            {
+                gameManager.P1LoseGameCoop();
+            }
+            playerController.islose = true;
+        }
     }
    
     public void spaw_Player()
     {
+        MyLocation.gameObject.SetActive(true);
         rb.velocity = Vector3.zero;
         playerController.playerHP = playerController.MaxHP;
         playerBuffHolder.PlayerBuffReset();
